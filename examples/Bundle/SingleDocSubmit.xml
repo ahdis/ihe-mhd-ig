@@ -1,0 +1,423 @@
+<Bundle 
+    xmlns="http://hl7.org/fhir">
+    <id value="xds" 
+        xmlns="http://hl7.org/fhir"/>
+    <meta 
+        xmlns="http://hl7.org/fhir">
+        <lastUpdated value="2013-07-01T13:11:33Z" 
+            xmlns="http://hl7.org/fhir"/>
+    </meta>
+    <type value="transaction" 
+        xmlns="http://hl7.org/fhir"/>
+    <entry 
+        xmlns="http://hl7.org/fhir">
+        <fullUrl value="urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d" 
+            xmlns="http://hl7.org/fhir"/>
+        <resource 
+            xmlns="http://hl7.org/fhir">
+            <DocumentReference 
+                xmlns="http://hl7.org/fhir">
+                <contained 
+                    xmlns="http://hl7.org/fhir">
+                    <Patient 
+                        xmlns="http://hl7.org/fhir">
+                        <id value="a2" 
+                            xmlns="http://hl7.org/fhir"/>
+                        <meta 
+                            xmlns="http://hl7.org/fhir">
+                            <lastUpdated value="2013-07-01T13:11:33Z" 
+                                xmlns="http://hl7.org/fhir"/>
+                        </meta>
+                        <text 
+                            xmlns="http://hl7.org/fhir">
+                            <status value="generated" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <div 
+                                xmlns="http://www.w3.org/1999/xhtml">Person DOE, John, M, dob: 27/05/1956
+                            </div>
+                        </text>
+                        <identifier 
+                            xmlns="http://hl7.org/fhir">
+                            <type 
+                                xmlns="http://hl7.org/fhir">
+                                <coding 
+                                    xmlns="http://hl7.org/fhir">
+                                    <system value="urn:ietf:rfc:3986" 
+                                        xmlns="http://hl7.org/fhir"/>
+                                    <code value="urn:ihe:iti:xds:2013:accession" 
+                                        xmlns="http://hl7.org/fhir"/>
+                                </coding>
+                            </type>
+                            <use value="usual" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <value value="MRN" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <system value="urn:oid:1.2.3.4.5.6" 
+                                xmlns="http://hl7.org/fhir"/>
+                        </identifier>
+                        <name 
+                            xmlns="http://hl7.org/fhir">
+                            <use value="usual" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <text value="DOE, John" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <family value="Doe" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <given value="John" 
+                                xmlns="http://hl7.org/fhir"/>
+                        </name>
+                        <birthDate value="1956-05-27" 
+                            xmlns="http://hl7.org/fhir"/>
+                    </Patient>
+                    <Practitioner 
+                        xmlns="http://hl7.org/fhir">
+                        <id value="a3" 
+                            xmlns="http://hl7.org/fhir"/>
+                        <meta 
+                            xmlns="http://hl7.org/fhir">
+                            <lastUpdated value="2013-07-01T13:11:33Z" 
+                                xmlns="http://hl7.org/fhir"/>
+                        </meta>
+                        <text 
+                            xmlns="http://hl7.org/fhir">
+                            <status value="generated" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <div 
+                                xmlns="http://www.w3.org/1999/xhtml">Author Gerald Smitty @ Cleveland Clinic
+                            </div>
+                        </text>
+                        <name 
+                            xmlns="http://hl7.org/fhir">
+                            <use value="usual" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <family value="Smitty" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <given value="Gerald" 
+                                xmlns="http://hl7.org/fhir"/>
+                        </name>
+                    </Practitioner>
+                    <Practitioner 
+                        xmlns="http://hl7.org/fhir">
+                        <id value="a4" 
+                            xmlns="http://hl7.org/fhir"/>
+                        <meta 
+                            xmlns="http://hl7.org/fhir">
+                            <lastUpdated value="2013-07-01T13:11:33Z" 
+                                xmlns="http://hl7.org/fhir"/>
+                        </meta>
+                        <text 
+                            xmlns="http://hl7.org/fhir">
+                            <status value="generated" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <div 
+                                xmlns="http://www.w3.org/1999/xhtml">Author Person @ Cleveland Clinic
+                            </div>
+                        </text>
+                        <name 
+                            xmlns="http://hl7.org/fhir">
+                            <use value="usual" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <family value="Dopplemeyer" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <given value="Sherry" 
+                                xmlns="http://hl7.org/fhir"/>
+                        </name>
+                    </Practitioner>
+                </contained>
+                <meta 
+                    xmlns="http://hl7.org/fhir">
+                    <lastUpdated value="2013-07-01T13:11:33Z" 
+                        xmlns="http://hl7.org/fhir"/>
+                </meta>
+                <text 
+                    xmlns="http://hl7.org/fhir">
+                    <status value="generated" 
+                        xmlns="http://hl7.org/fhir"/>
+                    <div 
+                        xmlns="http://www.w3.org/1999/xhtml">
+                        <a href="http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32" 
+                            xmlns="http://www.w3.org/1999/xhtml">Document: urn:oid:129.6.58.92.88336
+                        </a>
+                    </div>
+                </text>
+                <masterIdentifier 
+                    xmlns="http://hl7.org/fhir">
+                    <system value="urn:ietf:rfc:3986" 
+                        xmlns="http://hl7.org/fhir"/>
+                    <value value="urn:oid:1.2.129.6.58.92.88336" 
+                        xmlns="http://hl7.org/fhir"/>
+                </masterIdentifier>
+                <status value="current" 
+                    xmlns="http://hl7.org/fhir"/>
+                <type 
+                    xmlns="http://hl7.org/fhir">
+                    <coding 
+                        xmlns="http://hl7.org/fhir">
+                        <system value="urn:oid:1.3.6.1.4.1.21367.2017.3" 
+                            xmlns="http://hl7.org/fhir"/>
+                        <code value="34133-9" 
+                            xmlns="http://hl7.org/fhir"/>
+                        <display value="Summary of Episode Note" 
+                            xmlns="http://hl7.org/fhir"/>
+                    </coding>
+                </type>
+                <class 
+                    xmlns="http://hl7.org/fhir">
+                    <coding 
+                        xmlns="http://hl7.org/fhir">
+                        <system value="urn:ihe:cat:classCode" 
+                            xmlns="http://hl7.org/fhir"/>
+                        <code value="REPORTS" 
+                            xmlns="http://hl7.org/fhir"/>
+                        <display value="Reports" 
+                            xmlns="http://hl7.org/fhir"/>
+                    </coding>
+                </class>
+                <subject 
+                    xmlns="http://hl7.org/fhir">
+                    <reference value="http://localhost:8080/fhir/Patient/a2" 
+                        xmlns="http://hl7.org/fhir"/>
+                </subject>
+                <created value="2005-12-24" 
+                    xmlns="http://hl7.org/fhir"/>
+                <indexed value="2013-07-01T23:11:33+10:00" 
+                    xmlns="http://hl7.org/fhir"/>
+                <author 
+                    xmlns="http://hl7.org/fhir">
+                    <reference value="#a3" 
+                        xmlns="http://hl7.org/fhir"/>
+                </author>
+                <author 
+                    xmlns="http://hl7.org/fhir">
+                    <reference value="#a4" 
+                        xmlns="http://hl7.org/fhir"/>
+                </author>
+                <description value="Physical" 
+                    xmlns="http://hl7.org/fhir"/>
+                <securityLabel 
+                    xmlns="http://hl7.org/fhir">
+                    <coding 
+                        xmlns="http://hl7.org/fhir">
+                        <system value="urn:oid:1.3.6.1.4.1.21367.2017.3" 
+                            xmlns="http://hl7.org/fhir"/>
+                        <code value="N" 
+                            xmlns="http://hl7.org/fhir"/>
+                        <display value="normal" 
+                            xmlns="http://hl7.org/fhir"/>
+                    </coding>
+                </securityLabel>
+                <content 
+                    xmlns="http://hl7.org/fhir">
+                    <attachment 
+                        xmlns="http://hl7.org/fhir">
+                        <contentType value="text/plain" 
+                            xmlns="http://hl7.org/fhir"/>
+                        <language value="en-us" 
+                            xmlns="http://hl7.org/fhir"/>
+                        <url value="http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32" 
+                            xmlns="http://hl7.org/fhir"/>
+                    </attachment>
+                    <format 
+                        xmlns="http://hl7.org/fhir">
+                        <system value="urn:oid:1.3.6.1.4.1.21367.2017.3" 
+                            xmlns="http://hl7.org/fhir"/>
+                        <code value="urn:ihe:iti:appc:2016:consent" 
+                            xmlns="http://hl7.org/fhir"/>
+                    </format>
+                </content>
+                <context 
+                    xmlns="http://hl7.org/fhir">
+                    <sourcePatientInfo 
+                        xmlns="http://hl7.org/fhir">
+                        <reference value="#a2" 
+                            xmlns="http://hl7.org/fhir"/>
+                    </sourcePatientInfo>
+                    <period 
+                        xmlns="http://hl7.org/fhir">
+                        <start value="2004-12-23T08:00:00+10:00" 
+                            xmlns="http://hl7.org/fhir"/>
+                        <end value="2004-12-23T08:01:00+10:00" 
+                            xmlns="http://hl7.org/fhir"/>
+                    </period>
+                    <practiceSetting 
+                        xmlns="http://hl7.org/fhir">
+                        <coding 
+                            xmlns="http://hl7.org/fhir">
+                            <system value="urn:oid:1.3.6.1.4.1.21367.2017.3" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <code value="419192003" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <display value="Internal Medicine" 
+                                xmlns="http://hl7.org/fhir"/>
+                        </coding>
+                    </practiceSetting>
+                    <facilityType 
+                        xmlns="http://hl7.org/fhir">
+                        <coding 
+                            xmlns="http://hl7.org/fhir">
+                            <system value="urn:oid:1.3.6.1.4.1.21367.2017.3" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <code value="39350007" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <display value="Private physicians group office" 
+                                xmlns="http://hl7.org/fhir"/>
+                        </coding>
+                    </facilityType>
+                </context>
+            </DocumentReference>
+        </resource>
+        <request 
+            xmlns="http://hl7.org/fhir">
+            <method value="POST" 
+                xmlns="http://hl7.org/fhir"/>
+            <url value="DocumentReference" 
+                xmlns="http://hl7.org/fhir"/>
+        </request>
+    </entry>
+    <entry 
+        xmlns="http://hl7.org/fhir">
+        <fullUrl value="urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1e" 
+            xmlns="http://hl7.org/fhir"/>
+        <resource 
+            xmlns="http://hl7.org/fhir">
+            <DocumentManifest 
+                xmlns="http://hl7.org/fhir">
+                <id value="SubmissionSet" 
+                    xmlns="http://hl7.org/fhir"/>
+                <text 
+                    xmlns="http://hl7.org/fhir">
+                    <status value="generated" 
+                        xmlns="http://hl7.org/fhir"/>
+                    <div 
+                        xmlns="http://www.w3.org/1999/xhtml">Text
+                    </div>
+                </text>
+                <contained 
+                    xmlns="http://hl7.org/fhir">
+                    <Practitioner 
+                        xmlns="http://hl7.org/fhir">
+                        <id value="a1" 
+                            xmlns="http://hl7.org/fhir"/>
+                        <name 
+                            xmlns="http://hl7.org/fhir">
+                            <family value="Dopplemeyer" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <given value="Sherry" 
+                                xmlns="http://hl7.org/fhir"/>
+                        </name>
+                        <telecom 
+                            xmlns="http://hl7.org/fhir">
+                            <system value="email" 
+                                xmlns="http://hl7.org/fhir"/>
+                            <value value="john.doe@healthcare.example.org" 
+                                xmlns="http://hl7.org/fhir"/>
+                        </telecom>
+                    </Practitioner>
+                </contained>
+                <masterIdentifier 
+                    xmlns="http://hl7.org/fhir">
+                    <system value="http://example.org/documents" 
+                        xmlns="http://hl7.org/fhir"/>
+                    <value value="23425234234-2346" 
+                        xmlns="http://hl7.org/fhir"/>
+                </masterIdentifier>
+                <identifier 
+                    xmlns="http://hl7.org/fhir">
+                    <system value="http://example.org/documents" 
+                        xmlns="http://hl7.org/fhir"/>
+                    <value value="23425234234-2347" 
+                        xmlns="http://hl7.org/fhir"/>
+                </identifier>
+                <status value="current" 
+                    xmlns="http://hl7.org/fhir"/>
+                <type 
+                    xmlns="http://hl7.org/fhir">
+                    <coding 
+                        xmlns="http://hl7.org/fhir">
+                        <system value="urn:oid:1.3.6.1.4.1.21367.2017.3" 
+                            xmlns="http://hl7.org/fhir"/>
+                        <code value="34746-8" 
+                            xmlns="http://hl7.org/fhir"/>
+                        <display value="Nursing Evaluation and Management Note" 
+                            xmlns="http://hl7.org/fhir"/>
+                    </coding>
+                    <text value="History and Physical" 
+                        xmlns="http://hl7.org/fhir"/>
+                </type>
+                <subject 
+                    xmlns="http://hl7.org/fhir">
+                    <reference value="http://localhost:8080/fhir/Patient/a2" 
+                        xmlns="http://hl7.org/fhir"/>
+                </subject>
+                <created value="2004-12-25T23:50:50-05:00" 
+                    xmlns="http://hl7.org/fhir"/>
+                <author 
+                    xmlns="http://hl7.org/fhir">
+                    <reference value="#a1" 
+                        xmlns="http://hl7.org/fhir"/>
+                </author>
+                <recipient 
+                    xmlns="http://hl7.org/fhir">
+                    <reference value="#a1" 
+                        xmlns="http://hl7.org/fhir"/>
+                </recipient>
+                <source value="urn:oid:1.3.6.1.4.1.21367.2009.1.2.1" 
+                    xmlns="http://hl7.org/fhir"/>
+                <description value="Physical" 
+                    xmlns="http://hl7.org/fhir"/>
+                <content 
+                    xmlns="http://hl7.org/fhir">
+                    <pReference 
+                        xmlns="http://hl7.org/fhir">
+                        <reference value="urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d" 
+                            xmlns="http://hl7.org/fhir"/>
+                    </pReference>
+                </content>
+                <related 
+                    xmlns="http://hl7.org/fhir">
+                    <identifier 
+                        xmlns="http://hl7.org/fhir">
+                        <system value="http://example.org/documents" 
+                            xmlns="http://hl7.org/fhir"/>
+                        <value value="23425234234-9999" 
+                            xmlns="http://hl7.org/fhir"/>
+                    </identifier>
+                    <ref 
+                        xmlns="http://hl7.org/fhir">
+                        <reference value="DocumentReference/example" 
+                            xmlns="http://hl7.org/fhir"/>
+                    </ref>
+                </related>
+            </DocumentManifest>
+        </resource>
+    </entry>
+    <entry 
+        xmlns="http://hl7.org/fhir">
+        <fullUrl value="http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32" 
+            xmlns="http://hl7.org/fhir"/>
+        <resource 
+            xmlns="http://hl7.org/fhir">
+            <Binary 
+                xmlns="http://hl7.org/fhir">
+                <id value="1e404af3-077f-4bee-b7a6-a9be97e1ce32" 
+                    xmlns="http://hl7.org/fhir"/>
+                <meta 
+                    xmlns="http://hl7.org/fhir">
+                    <lastUpdated value="2013-07-01T13:11:33Z" 
+                        xmlns="http://hl7.org/fhir"/>
+                </meta>
+                <contentType value="text/plain" 
+                    xmlns="http://hl7.org/fhir"/>
+                <content value="YXNkYXNkYXNkYXNkYXNk" 
+                    xmlns="http://hl7.org/fhir"/>
+            </Binary>
+        </resource>
+        <request 
+            xmlns="http://hl7.org/fhir">
+            <method value="POST" 
+                xmlns="http://hl7.org/fhir"/>
+            <url value="Binary" 
+                xmlns="http://hl7.org/fhir"/>
+        </request>
+    </entry>
+</Bundle>

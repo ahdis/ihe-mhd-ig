@@ -1,0 +1,43 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "validate ressource with STU3 without terminology server",
+            "command": "java",
+            "args": [
+                "-jar",
+                "${workspaceRoot}/validator/org.hl7.fhir.validator.jar",
+                "${file}",
+                "-defn",
+                "${workspaceRoot}/validator/igpack.301.zip",
+                "-ig",
+                "${workspaceRoot}/ihefhir/StructureDefinition/",
+                 "-tx",
+                "n/a"
+            ],
+            "problemMatcher": {
+                "owner": "fhirvalidator",
+                "fileLocation": [
+                    "absolute"
+                ],
+                "pattern": [
+                    {
+                        "regexp": "^.*validating\\s*([^:]*)",
+                        "file": 1
+                    },
+                    {
+                        "regexp": "^.\\s*([^\\s]*).*@\\s*([^\\s]*).*\\(line\\s*(\\d+),.*col(\\d+)[^:]*:\\s(.*)",
+                        "line": 3,
+                        "column": 4,
+                        "severity": 1,
+                        "message": 5,
+                        "code": 2,
+                        "loop": true
+                    }
+                ]
+            }
+        }
+    ]
+}
