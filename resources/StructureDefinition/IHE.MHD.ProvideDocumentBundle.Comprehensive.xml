@@ -47,7 +47,7 @@
     <element id="Bundle.type">
       <path value="Bundle.type" />
       <short value="transaction" />
-      <fixedCode value="transaction " />
+      <fixedCode value="transaction" />
     </element>
     <element id="Bundle.entry">
       <path value="Bundle.entry" />

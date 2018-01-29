@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="IHE.MHD.Provide.Comprensive.DocumentReference" />
+  <id value="IHE.MHD.Provide.Comprehensive.DocumentReference" />
     <text>
     <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
 	StructureDefinition for Provide DocumentResource resource within the Provide Document Bundle transaction with Comprehensive (XDS-on-FHIR) metadata compliance in the 

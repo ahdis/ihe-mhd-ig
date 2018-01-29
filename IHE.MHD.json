@@ -1,0 +1,39 @@
+{
+    "tool": "jekyll",
+    "version" : "3.0.1",
+    "paths": {
+      "resources": [
+        "resources"
+      ],
+      "pages": "pages",
+      "temp": "temp",
+      "output": "output",
+      "qa": "qa",
+      "txCache": "txCache",
+      "specification": "http://hl7.org/fhir/STU3/"
+    },
+    "defaults": {
+      "Any": {
+        "template-format": "instance-template-format.html",
+        "template-base": "instance-template-base.html"
+      },
+      "StructureDefinition": {
+        "template-base": "instance-template-sd.html"
+      },
+      "ValueSet": {
+        "template-base": "instance-template-vs.html"
+      }
+    },
+    "canonicalBase": "http://ihe.net/fhir",
+    "source": "ImplementationGuide/IHE.MHD.xml",
+    "sct-edition": "http://snomed.info/sct/900000000000207008",
+    "resources": {
+    },
+    "logging": [
+      "init",
+      "progress",
+      "context",
+      "html",
+      "tx"
+    ]
+  }

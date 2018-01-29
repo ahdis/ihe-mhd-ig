@@ -1,3 +1,6 @@
+POST http://localhost:8180/xdstools5/fsim/default__oliver/fhir HTTP/1.1
+Content-Type: application/xml
+
 <Bundle 
     xmlns="http://hl7.org/fhir">
     <id value="xds" />
@@ -110,7 +113,7 @@
                 <!-- added for almadoc below -->
                 <identifier>
                     <system value="urn:ietf:rfc:3986" />
-                    <value value="urn:oid:1.2.129.6.58.92.88336" />
+                    <value value="urn:oid:1.2.129.6.58.92.88336.1" />
                 </identifier>
                 <!-- added for almadoc above -->
                 <status value="current" />
@@ -221,7 +224,7 @@
                 </masterIdentifier>
                 <identifier>
                     <system value="http://example.org/documents" />
-                    <value value="23425234234-2347" />
+                    <value value="23425234234" />
                 </identifier>
                 <status value="current" />
                 <type>

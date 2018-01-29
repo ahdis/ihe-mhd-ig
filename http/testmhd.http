@@ -1,3 +1,16 @@
+
+### Validation with In and out Parameter
+POST http://54.207.41.142:8080/auth/realms/almadoc/protocol/openid-connect/token HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+grant_type=client_credentials&client_id=connectathon&client_secret=797c09db-6ef7-4080-b139-8f9d5b92242f
+
+### MHD POST to server
+POST http://54.207.41.142:28080/almadoc-fhir-restful/fhir HTTP/1.1
+Content-Type: application/xml
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJOVEZPTU13TWFjelEtYjRiZWgwRlNhWUxKeXV0YTIxOThSMVlhM3lXdU5jIn0.eyJqdGkiOiJlNjlkMjU2ZS00MmE1LTQ0YmMtOWNjNC04ZjUyODAzM2U4ZjYiLCJleHAiOjE1MTcxOTc0MjQsIm5iZiI6MCwiaWF0IjoxNTE3MTYxNDI0LCJpc3MiOiJodHRwOi8vNTQuMjA3LjQxLjE0Mjo4MDgwL2F1dGgvcmVhbG1zL2FsbWFkb2MiLCJhdWQiOiJjb25uZWN0YXRob24iLCJzdWIiOiJjNjgzMjM1Yi03NzBlLTRjNmMtOWEyOS04NjMxZmRiMjQ0ZjkiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJjb25uZWN0YXRob24iLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiJiNzg2NDM4Yy05ZTczLTQ2MmQtODk3ZS03NDMwYzUzNzI5YmIiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiZmhpci1zZXJ2ZXIiOnsicm9sZXMiOlsiYXBpYWxtYWRvYyJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwiY2xpZW50SG9zdCI6IjY5Ljg1LjIyNS4xMTIiLCJjbGllbnRJZCI6ImNvbm5lY3RhdGhvbiIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1jb25uZWN0YXRob24iLCJjbGllbnRBZGRyZXNzIjoiNjkuODUuMjI1LjExMiIsImVtYWlsIjoic2VydmljZS1hY2NvdW50LWNvbm5lY3RhdGhvbkBwbGFjZWhvbGRlci5vcmcifQ.Giu1ODAdkFQNMiobD3bEZdCzkQM8ihT4QTbcAMh7gZrpHBAIY1c1EIAAYnEzOHaoHZvJ3W_dgzLAHGEhltfV4wTizjMup1ATp9jn8lk-H7Pa5pYqO0Fv_R0jCQiWj-S598skdNqkVatmopQPSQpas36hhRo3powPBB1p54JidEgWN9s-5WpVsK5r8g_aHxO2b4kl9mkMVSI09V8NOSI4lpddxP3hCvEhcy6ULh92G-1KfcfYVk3MJ3tR25hH0wQdthgP-j64wFoktUHk0PAfAV-NQgmA1e57tTksDvAgHRP33TZ4cnGdJ-FiLod8bfPkWu9aZkkr-h03LeOBugsNiQ
+
 <Bundle 
     xmlns="http://hl7.org/fhir">
     <id value="xds" />
@@ -110,7 +123,7 @@
                 <!-- added for almadoc below -->
                 <identifier>
                     <system value="urn:ietf:rfc:3986" />
-                    <value value="urn:oid:1.2.129.6.58.92.88336" />
+                    <value value="urn:oid:1.2.129.6.58.92.88336.3" />
                 </identifier>
                 <!-- added for almadoc above -->
                 <status value="current" />
@@ -221,7 +234,7 @@
                 </masterIdentifier>
                 <identifier>
                     <system value="http://example.org/documents" />
-                    <value value="23425234234-2347" />
+                    <value value="23425234234" />
                 </identifier>
                 <status value="current" />
                 <type>

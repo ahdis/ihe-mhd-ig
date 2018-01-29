@@ -6,7 +6,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">CapabilityStatement for Consumer Actor in the IHE IT Infrastructure Technical Framework Supplement 
       <a href="http://wiki.ihe.net/index.php/Patient_Demographics_Query_for_Mobile_(PDQm)">Patient Demographics Query or Mobile (PDQm)</a> </div>
   </text>
-  <url value="http://www.ihe.net/fhir/CapabilityStatement/IHE.PDQm.consumer"/>
+  <url value="http://ihe.net/fhir/CapabilityStatement/IHE.PDQm.consumer"/>
   <name value="IHE.PDQm.consumer"/>
   <title value="IHE ITI Patient Demographics Query for Mobile (PDQm) - consumer (client)"/>
   <status value="active"/>

@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "validate ressource with STU3 without terminology server",
+            "label": "validate ressource with STU3 with ig",
             "command": "java",
             "args": [
                 "-jar",
@@ -13,8 +13,54 @@
                 "-defn",
                 "${workspaceRoot}/validator/igpack.301.zip",
                 "-ig",
-                "${workspaceRoot}/ihefhir/StructureDefinition/",
-                 "-tx",
+                "${workspaceRoot}/resources/ValueSet/",
+                "-ig",
+                "${workspaceRoot}/resources/CodeSystem/",
+                "-ig",
+                "${workspaceRoot}/resources/StructureDefinition/",
+                "-profile",
+                "http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal"
+            ],
+            "problemMatcher": {
+                "owner": "fhirvalidator",
+                "fileLocation": [
+                    "absolute"
+                ],
+                "pattern": [
+                    {
+                        "regexp": "^.*validating\\s*([^:]*)",
+                        "file": 1
+                    },
+                    {
+                        "regexp": "^.\\s*([^\\s]*).*@\\s*([^\\s]*).*\\(line\\s*(\\d+),.*col(\\d+)[^:]*:\\s(.*)",
+                        "line": 3,
+                        "column": 4,
+                        "severity": 1,
+                        "message": 5,
+                        "code": 2,
+                        "loop": true
+                    }
+                ]
+            }
+        },
+        {
+            "label": "validate ressource with STU3 with ig without terminology server",
+            "command": "java",
+            "args": [
+                "-jar",
+                "${workspaceRoot}/validator/org.hl7.fhir.validator.jar",
+                "${file}",
+                "-defn",
+                "${workspaceRoot}/validator/igpack.301.zip",
+                "-ig",
+                "${workspaceRoot}/resources/ValueSet/",
+                "-ig",
+                "${workspaceRoot}/resources/CodeSystem/",
+                "-ig",
+                "${workspaceRoot}/resources/StructureDefinition/",
+                "-profile",
+                "http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal",
+                "-tx",
                 "n/a"
             ],
             "problemMatcher": {
@@ -38,6 +84,51 @@
                     }
                 ]
             }
+        },
+        {
+            "label": "validate ressource with STU3",
+            "command": "java",
+            "args": [
+                "-jar",
+                "${workspaceRoot}/validator/org.hl7.fhir.validator.jar",
+                "${file}",
+                "-defn",
+                "${workspaceRoot}/validator/igpack.301.zip",
+                "-tx",
+                "n/a"
+            ],
+            "problemMatcher": {
+                "owner": "fhirvalidator",
+                "fileLocation": [
+                    "absolute"
+                ],
+                "pattern": [
+                    {
+                        "regexp": "^.*validating\\s*([^:]*)",
+                        "file": 1
+                    },
+                    {
+                        "regexp": "^.\\s*([^\\s]*).*@\\s*([^\\s]*).*\\(line\\s*(\\d+),.*col(\\d+)[^:]*:\\s(.*)",
+                        "line": 3,
+                        "column": 4,
+                        "severity": 1,
+                        "message": 5,
+                        "code": 2,
+                        "loop": true
+                    }
+                ]
+            }
+        },
+        {
+            "label": "publish ig IHE.MHD",
+            "command": "java",
+            "args": [
+                "-jar",
+                "${workspaceRoot}/igpublisher/org.hl7.fhir.igpublisher.jar",
+                "-ig",
+                "${workspaceRoot}/IHE.MHD.json"
+            ],
+            "problemMatcher": []
         }
     ]
 }
