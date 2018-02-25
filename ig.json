@@ -3,14 +3,14 @@
   "version": "3.0.1",
   "paths": {
     "resources": [
-      "../../resources",
-      "../../examples"
+      "resources",
+      "examples"
     ],
     "pages": "pages",
     "temp": "temp",
     "output": "output",
     "qa": "qa",
-    "txCache": "../../txCache",
+    "txCache": "txCache",
     "specification": "http://hl7.org/fhir/STU3/"
   },
   "defaults": {

@@ -1,13 +1,9 @@
-# ihe on fhir
+# ihe mhd ig
 
 IHE publishes FHIR conformance resouces for the the technical framworks on their [ftp server](ftp://ftp.ihe.net/TF_Implementation_Material/fhir/).
+This project wants to build a validator for the IHE Profile [Mobile Access to Health Documents (MHD)](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_MHD.pdf)
 
-The following profiles of [IHE Technical Framework](https://www.ihe.net/Technical_Frameworks/) are included here, each gets its own implementation guide:
-* [Mobile Access to Health Documents (MHD)](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_MHD.pdf)
-
-This projects uses the [IG Publisher](http://wiki.hl7.org/index.php?title=IG_Publisher_Documentation) to process the resources in an implementation guide which can then be used by the validators.
-
-As base for the implementation guide [IG-Template](https://github.com/Healthedata1) from Eric Haas has been used.
+The [IG Publisher](http://wiki.hl7.org/index.php?title=IG_Publisher_Documentation) is uesed to process the resources in an implementation guide which can then be used by the validators. As a base for the implementation guide [IG-Template](https://github.com/Healthedata1) from Eric Haas is been used.
 
 The process to create the IG is currently manual (work in progress):
 * you need Java 
@@ -19,8 +15,9 @@ java -jar ./igpublisher/org.hl7.fhir.igpublisher.jar -ig ./ig/IHE.MHD/IHE.MHD.js
 ```
 The result will be available in ig/IHE.MHD/output/qa.html and errors, warnings during the process are in ig/IHE.MHD/output/qa.html.
 
+## current changes to IHE Implementation material 
 
-## current changes to IHE Implementation material pubished on ftp://ftp.ihe.net/TF_Implementation_Material/fhir/ to be discussed with ihe
+pubished on ftp://ftp.ihe.net/TF_Implementation_Material/fhir/ to be discussed with ihe
 
 1. Typos search/replace Comprensive, Comprenensive -> Comprehensive
 

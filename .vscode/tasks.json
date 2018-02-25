@@ -127,7 +127,7 @@
                 "${workspaceRoot}/igpublisher/org.hl7.fhir.igpublisher.jar",
                 "-web",
                 "-ig",
-                "${workspaceRoot}/ig/IHE.MHD/ig.json"
+                "${workspaceRoot}/ig.json"
             ],
             "problemMatcher": []
         }
