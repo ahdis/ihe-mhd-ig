@@ -1,0 +1,58 @@
+{
+  "tool": "jekyll",
+  "version": "3.0.1",
+  "paths": {
+    "resources": [
+      "../../resources",
+      "../../examples"
+    ],
+    "pages": "pages",
+    "temp": "temp",
+    "output": "output",
+    "qa": "qa",
+    "txCache": "../../txCache",
+    "specification": "http://hl7.org/fhir/STU3/"
+  },
+  "defaults": {
+    "AllergyIntolerance": {
+      "template-base": "ex.html"
+    },
+    "Any": {
+      "template-base": "base.html",
+      "template-format": "format.html"
+    },
+    "CodeSystem": {
+      "template-base": "cs.html"
+    },
+    "CapabilityStatement": {
+      "template-base": "cs.html"
+    },
+    "StructureDefinition": {
+      "template-base": "sd.html",
+      "template-defns": "sd-definitions.html"
+    },
+    "ConceptMap": {
+      "template-base": "cm.html"
+    },
+    "Basic": {
+      "template-base": "ex.html"
+    },
+    "ValueSet": {
+      "template-base": "vs.html"
+    }
+  },
+  "canonicalBase": "http://ihe.net/fhir",
+  "source": "implementationguide/IHE.MHD.xml",
+  "sct-edition": "http://snomed.info/sct/900000000000207008",
+  "resources": {},
+  "special-urls" : [
+    "http://ihe.net/fhir/tag/iti-65"
+  ],
+  "logging": [
+    "init",
+    "progress",
+    "context",
+    "html",
+    "tx"
+  ]
+}

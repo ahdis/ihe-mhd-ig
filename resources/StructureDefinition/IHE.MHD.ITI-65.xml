@@ -1,12 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition 
+  xmlns="http://hl7.org/fhir">
   <id value="IHE.MHD.ITI-65" />
-    <text>
-    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
-	StructureDefinition for Provide Document Bundle (ITI-65) transaction between the MHD Document Source and the MHD Document Recipient with Minimal metadata compliance in the 
-    IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>
-    References  <a href="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal" />
-	</div></text>
+  <text>
+    <status value="additional" />
+    <div 
+      xmlns="http://www.w3.org/1999/xhtml">
+	StructureDefinition for Provide Document Bundle (ITI-65) transaction between the MHD Document Source and the MHD Document Recipient with Minimal metadata compliance in the     IHE IT Infrastructure Technical Framework Supplement 
+      <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>
+    References  
+      <a href="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal" />
+    </div>
+  </text>
   <url value="http://ihe.net/fhir/tag/iti-65" />
   <name value="IHE.MHD.ITI-65.Minimal" />
   <title value="IHE MHD profile on Provide Document Bundle (ITI-65) transaction with Minimal Metadata" />
@@ -37,7 +42,12 @@
   <baseDefinition value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal" />
   <derivation value="constraint" />
   <differential>
-      <element id="Bundle.meta.profile">
+    <element id="Bundle">
+      <path value="Bundle"/>
+      <min value="0"/>
+      <max value="*"/>
+    </element>
+    <element id="Bundle.meta.profile">
       <path value="Bundle.meta.profile" />
       <short value="ITI-65" />
       <definition value="IHE MHD Provide Document Bundle transaction" />

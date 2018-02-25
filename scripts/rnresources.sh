@@ -1,9 +1,7 @@
-cd ../resources/StructureDefinition
-mv IHE.MHD.DocumentManifest.structuredefinition.xml IHE.MHD.DocumentManifest.xml			I
-mv IHE.MHD.Query.Minimal.DocumentReference.structuredefinition.xml IHE.MHD.Query.Minimal.DocumentReference.xml
-mv IHE.MHD.ITI-65.structuredefinition.xml IHE.MHD.ITI-65.xml						
-mv IHE.mCSD.HealthcareService.structuredefinition.xml IHE.mCSD.HealthcareService.xml
-mv IHE.MHD.List.structuredefinition.xml IHE.MHD.List.xml							
+IHE.MHD.DocumentManifest.xml	
+IHE.MHD.Query.Minimal.DocumentReference.xml
+IHE.MHD.ITI-65.xml						
+IHE.MHD.List.xml							
 mv IHE.mCSD.Location.Distance.structuredefinition.xml IHE.mCSD.Location.Distance.xml
 mv IHE.MHD.Provide.Comprehensive.DocumentReference.structuredefinition.xml IHE.MHD.Provide.Comprehensive.DocumentReference.xml		
 mv IHE.mCSD.Location.structuredefinition.xml IHE.mCSD.Location.xml
@@ -20,7 +18,7 @@ mv IHE.MHD.DocumentRecipient.capabilitystatement.xml IHE.MHD.DocumentRecipient.x
 mv IHE.MHD.DocumentResponder.capabilitystatement.xml IHE.MHD.DocumentResponder.xml
 mv IHE.MHD.DocumentSource.capabilitystatement.xml IHE.MHD.DocumentSource.xml
 mv IHE.PDQm.consumer.capabilitystatement.xml IHE.PDQm.consumer.xml
-mv IHE.PDQm.supplier.capabilitystatement.xml IHE.PDQm.supplier..xml
+mv IHE.PDQm.supplier.capabilitystatement.xml IHE.PDQm.supplier.xml
 mv IHE.mCSD.CareServicesSelectiveConsumer.HealtcareService.capabilitystatement.xml IHE.mCSD.CareServicesSelectiveConsumer.HealtcareService.xml
 mv IHE.mCSD.CareServicesSelectiveConsumer.Location.capabilitystatement.xml IHE.mCSD.CareServicesSelectiveConsumer.Location.xml
 mv IHE.mCSD.CareServicesSelectiveConsumer.Organization.capabilitystatement.xml IHE.mCSD.CareServicesSelectiveConsumer.Organization.xml

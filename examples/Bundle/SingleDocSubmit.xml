@@ -1,18 +1,56 @@
 <Bundle 
     xmlns="http://hl7.org/fhir">
-    <id value="xds" />
+    <id value="singledocsubmit" />
     <meta>
         <lastUpdated value="2013-07-01T13:11:33Z" />
         <profile value="http://ihe.net/fhir/tag/iti-65" />
     </meta>
     <type value="transaction" />
+    <!-- cannot put patient here first, see discussioon on zulip https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!msg/ihe-mhd-implementors/vAqKEk-0EuU/NlnYa4YtAgAJ>
+    -->
+    <entry>
+        <fullUrl value="urn:uuid:d117be39-1230-4df5-bbe4-5e29db6554e6" />
+        <resource>
+            <Patient>
+                <meta>
+                    <lastUpdated value="2013-07-01T13:11:33Z" />
+                </meta>
+                <text>
+                    <status value="generated" />
+                    <div 
+                        xmlns="http://www.w3.org/1999/xhtml">Person DOE, John, M, dob: 27/05/1956                                                                                                                                                                                                                                    
+                    </div>
+                </text>
+                <identifier>
+                    <use value="usual" />
+                    <type>
+                        <coding>
+                            <system value="urn:ietf:rfc:3986" />
+                            <code value="urn:ihe:iti:xds:2013:accession" />
+                        </coding>
+                    </type>
+                    <system value="urn:oid:1.2.3.4.5.6" />
+                    <!-- Moved before value -->
+                    <value value="MRN" />
+                </identifier>
+                <name>
+                    <use value="usual" />
+                    <text value="DOE, John" />
+                    <family value="Doe" />
+                    <given value="John" />
+                </name>
+                <birthDate value="1956-05-27" />
+            </Patient>
+        </resource>
+        <request>
+            <method value="POST" />
+            <url value="Patient" />
+        </request>
+    </entry>
     <entry>
         <fullUrl value="urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d" />
         <resource>
             <DocumentReference>
-                <meta>
-                    <lastUpdated value="2013-07-01T13:11:33Z" />
-                </meta>
                 <!-- moved about contained -->
                 <text>
                     <!-- moved above text -->
@@ -20,59 +58,19 @@
                     <div 
                         xmlns="http://www.w3.org/1999/xhtml">
                         <a href="http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32" 
-                            xmlns="http://www.w3.org/1999/xhtml">Document: urn:oid:129.6.58.92.88336                                                                                                                        
+                            xmlns="http://www.w3.org/1999/xhtml">Document: urn:oid:129.6.58.92.88336                                                                                                                                                                                                                                                                                        
                         </a>
                     </div>
                 </text>
-                <contained>
-                    <Patient>
-                        <id value="a2" />
-                        <!--  If a resource is contained in another resource, it SHALL NOT have a meta/text <meta>
-                            <lastUpdated value="2013-07-01T13:11:33Z" />
-                        </meta>
-                        <text>
-                            <status value="generated" />
-                            <div 
-                                xmlns="http://www.w3.org/1999/xhtml">Person DOE, John, M, dob: 27/05/1956                                                                                                                                            
-                            </div>
-                        </text>
-                        -->
-                        <identifier>
-                            <use value="usual" />
-                            <!-- Moved before type -->
-                            <type>
-                                <coding>
-                                    <system value="urn:ietf:rfc:3986" />
-                                    <code value="urn:ihe:iti:xds:2013:accession" />
-                                </coding>
-                            </type>
-                            <system value="urn:oid:1.2.3.4.5.6" />
-                            <!-- Moved before value -->
-                            <value value="MRN" />
-                        </identifier>
-                        <name>
-                            <use value="usual" />
-                            <text value="DOE, John" />
-                            <family value="Doe" />
-                            <given value="John" />
-                        </name>
-                        <birthDate value="1956-05-27" />
-                    </Patient>
-                </contained>
-                <!-- contained contains only one ressource -->
+                <!-- patient cannot be contained                 <contained></contained>
+ -->
                 <contained>
                     <Practitioner>
                         <id value="a3" />
                         <!--  If a resource is contained in another resource, it SHALL NOT have a meta/text 
-                        <meta>
-                            <lastUpdated value="2013-07-01T13:11:33Z" />
-                        </meta>
-                        <text>
-                            <status value="generated" />
-                            <div 
-                                xmlns="http://www.w3.org/1999/xhtml">Author Gerald Smitty @ Cleveland Clinic                                                                                                                                            
-                            </div>
-                        </text>
+                        <meta><lastUpdated value="2013-07-01T13:11:33Z" /></meta><text><status value="generated" /><div 
+                        xmlns="http://www.w3.org/1999/xhtml">Author Gerald Smitty @ Cleveland Clinic                                                                                                                                            
+                            </div></text>
                         -->
                         <name>
                             <use value="usual" />
@@ -85,16 +83,10 @@
                 <contained>
                     <Practitioner>
                         <id value="a4" />
-                         <!--  If a resource is contained in another resource, it SHALL NOT have a meta/text 
-                        <meta>
-                            <lastUpdated value="2013-07-01T13:11:33Z" />
-                        </meta>
-                        <text>
-                            <status value="generated" />
-                            <div 
-                                xmlns="http://www.w3.org/1999/xhtml">Author Person @ Cleveland Clinic                                                                                                                                            
-                            </div>
-                        </text>
+                        <!--  If a resource is contained in another resource, it SHALL NOT have a meta/text 
+                        <meta><lastUpdated value="2013-07-01T13:11:33Z" /></meta><text><status value="generated" /><div 
+                        xmlns="http://www.w3.org/1999/xhtml">Author Person @ Cleveland Clinic                                                                                                                                            
+                            </div></text>
                         -->
                         <name>
                             <use value="usual" />
@@ -129,9 +121,11 @@
                     </coding>
                 </class>
                 <subject>
-                    <reference value="http://localhost:8080/fhir/Patient/a2" />
+                    <reference value="urn:uuid:d117be39-1230-4df5-bbe4-5e29db6554e6" />
+                    <!-- raises an error in the valiator    <reference value="http://test.fhir.org/r3/Patient/1" /> -->
                 </subject>
-                <created value="2005-12-24" />
+                <!-- created not allowed
+                <created value="2005-12-24" /> -->
                 <indexed value="2013-07-01T23:11:33+10:00" />
                 <author>
                     <reference value="#a3" />
@@ -181,7 +175,8 @@
                     </practiceSetting>
                     <!-- sourcePatientInfo moved below practiceSetting -->
                     <sourcePatientInfo>
-                        <reference value="#a2" />
+                        <reference value="urn:uuid:d117be39-1230-4df5-bbe4-5e29db6554e6" />
+                        <!-- raises an error in the valiator    <reference value="http://test.fhir.org/r3/Patient/1" /> -->
                     </sourcePatientInfo>
                 </context>
             </DocumentReference>
@@ -195,11 +190,13 @@
         <fullUrl value="urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1e" />
         <resource>
             <DocumentManifest>
+                <!-- id not allowed 
                 <id value="SubmissionSet" />
+                -->
                 <text>
                     <status value="generated" />
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Text                                                                                                            
+                        xmlns="http://www.w3.org/1999/xhtml">Text                                                                                                                                                                                                                                                    
                     </div>
                 </text>
                 <contained>
@@ -233,7 +230,8 @@
                     <text value="History and Physical" />
                 </type>
                 <subject>
-                    <reference value="http://localhost:8080/fhir/Patient/a2" />
+                    <reference value="urn:uuid:d117be39-1230-4df5-bbe4-5e29db6554e6" />
+                    <!-- raises an error in the valiator    <reference value="http://test.fhir.org/r3/Patient/1" /> -->
                 </subject>
                 <created value="2004-12-25T23:50:50-05:00" />
                 <author>
@@ -242,23 +240,15 @@
                 <recipient>
                     <reference value="#a1" />
                 </recipient>
-                <source value="urn:oid:1.3.6.1.4.1.21367.2009.1.2.1" />
+                <source value="urn:oid:1.3.6.1.4.1.21367.2009.1.2.1" /> 
                 <description value="Physical" />
                 <content>
                     <pReference>
                         <reference value="urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d" />
                     </pReference>
                 </content>
-            <!-- removed    
-                <related>
-                    <identifier>
-                        <system value="http://example.org/documents" />
-                        <value value="23425234234-9999" />
-                    </identifier>
-                    <ref>
-                        <reference value="DocumentReference/example" />
-                    </ref>
-                </related>
+                <!-- removed    
+                <related><identifier><system value="http://example.org/documents" /><value value="23425234234-9999" /></identifier><ref><reference value="DocumentReference/example" /></ref></related>
                 -->
             </DocumentManifest>
         </resource>

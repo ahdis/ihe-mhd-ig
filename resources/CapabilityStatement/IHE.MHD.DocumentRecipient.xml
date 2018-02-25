@@ -40,7 +40,7 @@
 	<acceptUnknown value="both" />
   <format value="application/fhir+xml"/>
   <format value="application/fhir+json"/>
-<!-- FIXME with john  <implementationGuide value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/> -->
+<!-- FIXME   <implementationGuide value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/> -->
   <rest>
     <mode value="server"/>
     <documentation value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
@@ -53,7 +53,7 @@
       <documentation value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal"/>
     </interaction>
   </rest>
-<!-- FIXME with john 
+<!-- FIXME 
   <rest>
     <mode value="server"/>
     <security>

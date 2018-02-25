@@ -36,6 +36,11 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
   <derivation value="constraint" />
   <differential>
+    <element id="DocumentReference">
+      <path value="DocumentReference"/>
+      <min value="0"/>
+      <max value="*"/>
+    </element>  
     <element id="DocumentReference.masterIdentifier">
       <path value="DocumentReference.masterIdentifier" />
       <comment value="See ITI TF-2x: Z.9.1.1 Identifier and CDA root plus extension." />

@@ -6,7 +6,7 @@
     <status value="additional" />
     <div 
       xmlns="http://www.w3.org/1999/xhtml">
-	ImplementationGuide for      IHE IT Infrastructure Technical Framework Supplement       
+	ImplementationGuide for      IHE IT Infrastructure Technical Framework Supplement             
       <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>
     </div>
   </text>
@@ -148,5 +148,31 @@
         <reference value="ValueSet/IHE.formatcode.vs" />
       </sourceReference>
     </resource>
+    <!-- added for ig -->
+    <resource>
+      <example value="false" />
+      <name value="Provide Document Bundle [ITI-65]" />
+      <description value="Profiling with IHE.MHD.ProvideDocumentBundle.Minimal (could be also Comprehensive)" />
+      <sourceReference>
+        <reference value="StructureDefinition/IHE.MHD.ITI-65" />
+      </sourceReference>
+    </resource>
+    <resource>
+			<example value="true" />
+			<name value="NIST XdsTools5 SubmitBundle" />
+			<description value="Provide Document Bundle [ITI-65]" />
+			<sourceReference>
+				<reference value="Bundle/singledocsubmit" />
+			</sourceReference>
+			<exampleFor>
+				<reference value="StructureDefinition/IHE.MHD.Provide.Minimal.DocumentReference" />
+			</exampleFor>
+		</resource>
   </package>
+  <!-- added for ig -->
+  <page>
+    <source value="index.html"/>
+    <title value="IG Templage Homepage"/>
+    <kind value="page"/>
+  </page>
 </ImplementationGuide>
