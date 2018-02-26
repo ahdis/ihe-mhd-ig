@@ -6,8 +6,6 @@
         <profile value="http://ihe.net/fhir/tag/iti-65" />
     </meta>
     <type value="transaction" />
-    <!-- cannot put patient here first, see discussioon on zulip https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!msg/ihe-mhd-implementors/vAqKEk-0EuU/NlnYa4YtAgAJ>
-    -->
     <entry>
         <fullUrl value="urn:uuid:d117be39-1230-4df5-bbe4-5e29db6554e6" />
         <resource>

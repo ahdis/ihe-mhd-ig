@@ -1,19 +1,42 @@
-# ihe mhd ig
+# validation for the IHE MHD profile
 
 IHE publishes FHIR conformance resouces for the the technical framworks on their [ftp server](ftp://ftp.ihe.net/TF_Implementation_Material/fhir/).
 This project wants to build a validator for the IHE Profile [Mobile Access to Health Documents (MHD)](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_MHD.pdf)
 
-The [IG Publisher](http://wiki.hl7.org/index.php?title=IG_Publisher_Documentation) is uesed to process the resources in an implementation guide which can then be used by the validators. As a base for the implementation guide [IG-Template](https://github.com/Healthedata1) from Eric Haas is been used.
+The [IG Publisher](http://wiki.hl7.org/index.php?title=IG_Publisher_Documentation) is used to process the resources in an implementation guide which can then be used by the validators. As a base for the implementation guide [IG-Template](https://github.com/Healthedata1) from Eric Haas has been used. The Implementation Guide is built with the [FHIR Implementation Guide Auto-Builder(https://github.com/hl7-fhir/auto-ig-builder). [Validation Results for IHE.MHD](http://build.fhir.org/ig/ahdis/ihe-mhd-ig/qa.htm)
 
-The process to create the IG is currently manual (work in progress):
-* you need Java 
-* get the ig publisher and validator from the current build of fhir with the defintions for version 3.0.1, use ./updatetools.sh
-* create the ig with the following command from the command line
+you can now validate example files against the built ig:
+```
+java -jar ./validator/org.hl7.fhir.validator.jar ./examples/bundle/singledocsubmit.xml -defn ./validator/igpack.301.zip -ig http://build.fhir.org/ig/ahdis/ihe-mhd-ig
+ .. load FHIR from ./validator/igpack.301.zip
+  .. connect to tx server @ http://tx.fhir.org/r4
+    (v3.0.1-11917)
++  .. load IG from http://build.fhir.org/ig/ahdis/ihe-mhd-ig
+  .. validate
+*FAILURE* validating ./examples/bundle/singledocsubmit.xml:  error:4 warn:4 info:28
+  Error @ Bundle.entry[2].resource.author[1] (line 128, col25) : SHALL have a contained resource if a local reference is provided ( (url: a3; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
+  ...
+```
+still working on the errors :-) should give the same results as on the Validation Results for IHE.MHD](http://build.fhir.org/ig/ahdis/ihe-mhd-ig/qa.htm) if you use one of the examples in the implementation guide.
+
+# using the validator locally
+
+using the validator directly without the ig itself (please by aware that the validator can fail silenty when the StructureDefinitions are in itself not valid):
 
 ```
-java -jar ./igpublisher/org.hl7.fhir.igpublisher.jar -ig ./ig/IHE.MHD/IHE.MHD.json 
+java -jar ./validator/org.hl7.fhir.validator.jar ./examples/bundle/singledocsubmit.xml -defn ./validator/igpack.301.zip -ig ./resources/valueset/ -ig ./resources/codesystem/ -ig ./resources/structuredefinition/
 ```
-The result will be available in ig/IHE.MHD/output/qa.html and errors, warnings during the process are in ig/IHE.MHD/output/qa.html.
+
+instead of referencing the ig from the build you can also build the ig by yourself:
+
+```
+java -jar ./igpublisher/org.hl7.fhir.igpublisher.jar -web -ig ./ig.json
+```
+and then use the validator the following way:
+
+```
+java -jar ./validator/org.hl7.fhir.validator.jar ./examples/bundle/singledocsubmit.xml -defn ./validator/igpack.301.zip -ig ./output/definitions.xml.zip 
+```
 
 ## current changes to IHE Implementation material 
 
