@@ -6,9 +6,9 @@
     <status value="additional" />
     <div 
       xmlns="http://www.w3.org/1999/xhtml">
-	StructureDefinition for Provide Document Bundle (ITI-65) transaction between the MHD Document Source and the MHD Document Recipient with Minimal metadata compliance in the     IHE IT Infrastructure Technical Framework Supplement 
+	StructureDefinition for Provide Document Bundle (ITI-65) transaction between the MHD Document Source and the MHD Document Recipient with Minimal metadata compliance in the     IHE IT Infrastructure Technical Framework Supplement       
       <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>
-    References  
+    References        
       <a href="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal" />
     </div>
   </text>
@@ -39,13 +39,25 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Bundle" />
-  <baseDefinition value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal" />
+  <baseDefinition value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal" /> 
   <derivation value="constraint" />
   <differential>
     <element id="Bundle">
       <path value="Bundle"/>
       <min value="0"/>
       <max value="*"/>
+    </element>
+    <element id="Bundle.meta">
+      <path value="Bundle.meta"/>
+      <short value="Metadata about the resource"/>
+      <definition value="The metadata about the resource. This is content that is maintained by the infrastructure.
+       Changes to the content may not always be associated with version changes to the resource."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Meta"/>
+      </type>
+      <isSummary value="true"/>
     </element>
     <element id="Bundle.meta.profile">
       <path value="Bundle.meta.profile" />

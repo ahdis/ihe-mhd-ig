@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle 
+    xmlns="http://hl7.org/fhir">
+    <id value="bundle-mf-r4" />
+    <meta>
+        <profile value="http://www.ahdis.ch/fhir/StructureDefinition/bundle-with-fixed-docmanifest" />
+        <!-- this resources validates against the STU3, however it does not validate against the profile                
+                     http://www.ahdis.ch/fhir/StructureDefinition/bundle-with-fixed-docmanifest, Error @ Bundle.entry.resource.author (line 28, col25) : SHALL have a contained resource if a local reference is provided ( (url: a1; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]  Error @ Bundle.entry.resource.recipient (line 31, col28) : SHALL have a contained resource if a local reference is provided ( (url: a1; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]                      
+
+                     rule comes from: http://www.hl7.org/fhir/references.html
+                     -->
+    </meta>
+    <type value="transaction"/>
+    <entry>
+        <fullUrl value="http://www.ahdis.ch/fhir/Bundle/bundle-mf" />
+        <resource>
+            <DocumentManifest>
+                <id value="bundle-mf-r4"/>
+                <contained>
+                    <Practitioner>
+                        <id value="a1" />
+                        <name>
+                            <family value="Dopplemeyer" />
+                            <given value="Sherry" />
+                        </name>
+                        <telecom>
+                            <system value="email" />
+                            <value value="john.doe@healthcare.example.org" />
+                        </telecom>
+                    </Practitioner>
+                </contained>
+                <contained>
+                    <Binary>
+                        <id value="bin" />
+                        <contentType value="text/plain" />
+                        <content value="SGVsbG8gV29ybGQ=" />
+                    </Binary>
+                </contained>
+                <status value="current" />
+                <recipient>
+                    <reference value="#a1" />
+                </recipient>
+                <content>
+                    <reference value="#bin" />
+                </content>
+            </DocumentManifest>
+        </resource>
+    </entry>
+</Bundle>

@@ -52,11 +52,6 @@
        Changes to the content may not always be associated with version changes to the resource."/>
       <min value="1"/>
       <max value="1"/>
-      <base>
-        <path value="Resource.meta"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
       <type>
         <code value="Meta"/>
       </type>

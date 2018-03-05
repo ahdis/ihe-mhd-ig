@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle 
+    xmlns="http://hl7.org/fhir">
+    <id value="bundle-with-relativeref" />
+    <type value="batch"/>
+    <entry>
+        <fullUrl value="http://www.ahdis.ch/fhir/DocumentManifest/doc-mf-minimal-no-mhd" />
+        <resource>
+            <DocumentManifest>
+                <id value="doc-mf-minimal-no-mhd"/>
+                <status value="current" />
+                <content>
+                    <pReference>
+                        <reference value="DocumentReference/doc-ref-minimal-no-mhd"/>
+                    </pReference>
+                </content>
+            </DocumentManifest>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://www.ahdis.ch/fhir/DocumentReference/doc-ref-minimal-no-mhd" />
+        <resource>
+            <DocumentReference>
+                <id value="doc-ref-minimal-no-mhd" />
+                <contained>
+                    <Practitioner>
+                        <id value="cont1" />
+                        <name>
+                            <use value="usual" />
+                            <family value="Heim-Vögtlin" />
+                            <given value="Marie" />
+                        </name>
+                    </Practitioner>
+                </contained>
+                <contained>
+                    <Practitioner>
+                        <id value="cont2" />
+                        <name>
+                            <use value="usual" />
+                            <family value="Farner" />
+                            <given value="Caroline" />
+                        </name>
+                    </Practitioner>
+                </contained>
+                <status value="current" />
+                <type>
+                    <coding>
+                        <system value="http://loinc.org" />
+                        <code value="55107-7" />
+                        <display value="Addendum Document" />
+                    </coding>
+                </type>
+                <indexed value="2018-03-03T12:51:07.147Z" />
+                <author>
+                    <reference value="#cont1" />
+                </author>
+                <author>
+                    <reference value="#cont2" />
+                </author>
+                <content>
+                    <attachment>
+                        <contentType value="text/plain" />
+                        <data value="SGVsbG8gV29ybGQ=" />
+                    </attachment>
+                </content>
+            </DocumentReference>
+        </resource>
+    </entry>
+</Bundle>

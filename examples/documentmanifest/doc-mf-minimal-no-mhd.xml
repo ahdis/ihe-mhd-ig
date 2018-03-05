@@ -1,0 +1,10 @@
+<DocumentManifest 
+    xmlns="http://hl7.org/fhir">
+    <id value="doc-mf-minimal-no-mhd"/>
+    <status value="current" />
+    <content>
+        <pReference>
+            <reference value="DocumentReference/doc-ref-minimal-no-mhd"/>
+        </pReference>
+    </content>
+</DocumentManifest> 

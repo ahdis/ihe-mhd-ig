@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition 
+  xmlns="http://hl7.org/fhir">
+  <id value="bundle-with-fixed-docmanifest" />
+  <url value="http://www.ahdis.ch/fhir/StructureDefinition/bundle-with-fixed-docmanifest" />
+  <name value="Bundle with fixed composition" />
+  <status value="draft" />
+  <publisher value="ahdis" />
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.ahdis.ch" />
+    </telecom>
+  </contact>
+  <description value="Bundle with fixed Document Manifest to illustrate the validation error, a DocumentManifest resource is required." />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Bundle" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="bundle-with-fixed-composition.Bundle">
+      <path value="Bundle" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="bundle-with-fixed-composition.Bundle.type">
+      <path value="Bundle.type" />
+      <fixedCode value="transaction" />
+    </element>
+    <element id="bundle-with-fixed-composition.Bundle.entry">
+      <path value="Bundle.entry" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="resource" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="bundle-with-fixed-composition.Bundle.entry:DocumentManifest">
+      <path value="Bundle.entry" />
+      <sliceName value="DocumentManifest" />
+      <short value="A resource in the bundle" />
+      <definition value="The Resources for the entry." />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Bundle.entry.resource:DocumentManifest">
+      <path value="Bundle.entry.resource" />
+      <short value="A resource in the bundle" />
+      <definition value="The Resources for the entry." />
+      <type>
+        <code value="DocumentManifest" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/DocumentManifest" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

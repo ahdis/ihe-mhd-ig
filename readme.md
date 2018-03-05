@@ -17,7 +17,7 @@ java -jar ./validator/org.hl7.fhir.validator.jar ./examples/bundle/singledocsubm
   Error @ Bundle.entry[2].resource.author[1] (line 128, col25) : SHALL have a contained resource if a local reference is provided ( (url: a3; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
   ...
 ```
-still working on the errors :-) should give the same results as on the Validation Results for IHE.MHD](http://build.fhir.org/ig/ahdis/ihe-mhd-ig/qa.htm) if you use one of the examples in the implementation guide.
+still working on the errors :-) should give the same results as on the [Validation Results for IHE.MHD](http://build.fhir.org/ig/ahdis/ihe-mhd-ig/qa.htm) if you use one of the examples in the implementation guide.
 
 # using the validator locally
 

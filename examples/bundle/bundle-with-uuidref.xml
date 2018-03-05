@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle 
+    xmlns="http://hl7.org/fhir">
+    <id value="bundle-with-uuidref" />
+    <meta>
+        <profile value="http://ihe.net/fhir/tag/iti-65" />
+    </meta>
+    <type value="transaction"/>
+    <entry>
+        <fullUrl value="http://www.ahdis.ch/fhir/DocumentManifest/doc-mf-minimal-no-mhd" />
+        <resource>
+            <DocumentManifest>
+                <id value="doc-mf-minimal-no-mhd"/>
+                <contained>
+                    <Practitioner>
+                        <id value="a1" />
+                        <name>
+                            <family value="Dopplemeyer" />
+                            <given value="Sherry" />
+                        </name>
+                        <telecom>
+                            <system value="email" />
+                            <value value="john.doe@healthcare.example.org" />
+                        </telecom>
+                    </Practitioner>
+                </contained>
+                <status value="current" />
+                <author>
+                    <reference value="#a1" />
+                </author>
+                <recipient>
+                    <reference value="#a1" />
+                </recipient>
+                <content>
+                    <pReference>
+                        <reference value="urn:uuid:EE02B4DE-AE1E-49A8-819A-EF8508AFDDAB"/>
+                    </pReference>
+                </content>
+            </DocumentManifest>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:EE02B4DE-AE1E-49A8-819A-EF8508AFDDAB" />
+        <resource>
+            <DocumentReference>
+                <contained>
+                    <Practitioner>
+                        <id value="cont1" />
+                        <name>
+                            <use value="usual" />
+                            <family value="Heim-Vögtlin" />
+                            <given value="Marie" />
+                        </name>
+                    </Practitioner>
+                </contained>
+                <contained>
+                    <Practitioner>
+                        <id value="cont2" />
+                        <name>
+                            <use value="usual" />
+                            <family value="Farner" />
+                            <given value="Caroline" />
+                        </name>
+                    </Practitioner>
+                </contained>
+                <status value="current" />
+                <type>
+                    <coding>
+                        <system value="http://loinc.org" />
+                        <code value="55107-7" />
+                        <display value="Addendum Document" />
+                    </coding>
+                </type>
+                <indexed value="2018-03-03T12:51:07.147Z" />
+                <author>
+                    <reference value="#cont1" />
+                </author>
+                <author>
+                    <reference value="#cont2" />
+                </author>
+                <content>
+                    <attachment>
+                        <contentType value="text/plain" />
+                        <data value="SGVsbG8gV29ybGQ=" />
+                    </attachment>
+                </content>
+            </DocumentReference>
+        </resource>
+    </entry>
+</Bundle>
