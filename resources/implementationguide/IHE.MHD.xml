@@ -168,25 +168,6 @@
         <reference value="StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal" />
       </exampleFor>
     </resource>
-    <resource>
-      <example value="false" />
-      <name value="BundleFixedDocumentManifest" />
-      <description value="Bundle with fixed Document Manifest to illustrate the validation error, a DocumentManifest resource is required." />
-      <sourceReference>
-        <reference value="StructureDefinition/bundle-with-fixed-docmanifest" />
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true" />
-      <name value="Bundle with fixed DocumentManifest" />
-      <description value="Bundle with fixed Document Manifest to illustrate the validation error, a DocumentManifest resource is required." />
-      <sourceReference>
-        <reference value="Bundle/bundle-mf" />
-      </sourceReference>
-      <exampleFor>
-        <reference value="StructureDefinition/bundle-with-fixed-docmanifest" />
-      </exampleFor>
-    </resource>
   </package>
   <!-- added for ig -->
   <page>

@@ -9,3 +9,6 @@ tools
 chmed16a
 http
 scripts
+examples/bundle/bundleMHD.xml
+examples/bundle/bundleMHDfix.xml
+examples/bundle/xds-example.xml

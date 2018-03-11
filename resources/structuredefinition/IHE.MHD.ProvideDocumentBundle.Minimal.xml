@@ -11,7 +11,7 @@
     </div>
   </text>
   <url value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal" />
-  <name value="IHE.MHD.ProvideDocumentBundle.Minimal" />
+  <name value="IheMhdProvideDocumentBundleMinimal" />
   <title value="IHE MHD profile on Provide Document Bundle (ITI-65) transaction with Minimal Metadata" />
   <status value="draft" />
   <experimental value="false" />

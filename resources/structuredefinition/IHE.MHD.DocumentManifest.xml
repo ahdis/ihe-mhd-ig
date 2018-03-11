@@ -11,7 +11,7 @@
     </div>
   </text>
   <url value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentManifest" />
-  <name value="IHE.MHD.DocumentManifest" />
+  <name value="IheMhdDocumentManifest" />
   <title value="IHE MHD Profile on DocumentManifest (SubmissionSet)" />
   <status value="draft" />
   <experimental value="false" />

@@ -13,7 +13,7 @@
     </div>
   </text>
   <url value="http://ihe.net/fhir/tag/iti-65" />
-  <name value="IHE.MHD.ITI-65.Minimal" />
+  <name value="IheMhdIti65Minimal" />
   <title value="IHE MHD profile on Provide Document Bundle (ITI-65) transaction with Minimal Metadata" />
   <status value="draft" />
   <experimental value="false" />

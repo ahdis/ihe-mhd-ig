@@ -11,7 +11,7 @@
     </div>
   </text>
   <url value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Comprehensive" />
-  <name value="IHE.MHD.ProvideDocumentBundle.Comprehensive" />
+  <name value="IheMhdProvideDocumentBundleComprehensive" />
   <title value="IHE MHD profile on Provide Document Bundle (ITI-65) transaction with Comprehensive Metadata" />
   <status value="draft" />
   <experimental value="false" />

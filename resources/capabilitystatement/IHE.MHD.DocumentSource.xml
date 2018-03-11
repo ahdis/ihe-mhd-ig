@@ -11,7 +11,7 @@
     </div>
   </text>
   <url value="http://ihe.net/fhir/CapabilityStatement/IHE.MHD.DocumentSource"/>
-  <name value="IHE.MHD.DocumentSource"/>
+  <name value="IheMhdDocumentSource"/>
   <title value="IHE ITI Mobile access to Health Documents (MHD) - Document Source (publisher)"/>
   <status value="draft"/>
   <experimental value="false"/>
