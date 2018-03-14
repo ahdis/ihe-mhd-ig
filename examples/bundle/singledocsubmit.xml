@@ -7,45 +7,6 @@
     </meta>
     <type value="transaction" />
     <entry>
-        <fullUrl value="urn:uuid:d117be39-1230-4df5-bbe4-5e29db6554e6" />
-        <resource>
-            <Patient>
-                <meta>
-                    <lastUpdated value="2013-07-01T13:11:33Z" />
-                </meta>
-                <text>
-                    <status value="generated" />
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Person DOE, John, M, dob: 27/05/1956                                                                                                                                                                                                                                    
-                    </div>
-                </text>
-                <identifier>
-                    <use value="usual" />
-                    <type>
-                        <coding>
-                            <system value="urn:ietf:rfc:3986" />
-                            <code value="urn:ihe:iti:xds:2013:accession" />
-                        </coding>
-                    </type>
-                    <system value="urn:oid:1.2.3.4.5.6" />
-                    <!-- Moved before value -->
-                    <value value="MRN" />
-                </identifier>
-                <name>
-                    <use value="usual" />
-                    <text value="DOE, John" />
-                    <family value="Doe" />
-                    <given value="John" />
-                </name>
-                <birthDate value="1956-05-27" />
-            </Patient>
-        </resource>
-        <request>
-            <method value="POST" />
-            <url value="Patient" />
-        </request>
-    </entry>
-    <entry>
         <fullUrl value="urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d" />
         <resource>
             <DocumentReference>
@@ -97,12 +58,6 @@
                     <system value="urn:ietf:rfc:3986" />
                     <value value="urn:oid:1.2.129.6.58.92.88336" />
                 </masterIdentifier>
-                <!-- added for almadoc below -->
-                <identifier>
-                    <system value="urn:ietf:rfc:3986" />
-                    <value value="urn:oid:1.2.129.6.58.92.88336" />
-                </identifier>
-                <!-- added for almadoc above -->
                 <status value="current" />
                 <type>
                     <coding>
@@ -119,8 +74,7 @@
                     </coding>
                 </class>
                 <subject>
-                    <reference value="urn:uuid:d117be39-1230-4df5-bbe4-5e29db6554e6" />
-                    <!-- raises an error in the valiator    <reference value="http://test.fhir.org/r3/Patient/1" /> -->
+                    <reference value="http://localhost:8080/xdstools6/fsim/default__fhir_support/fhir/Patient/9effb7e7-19a7-4a8e-a185-9fb5e17a0514" />
                 </subject>
                 <!-- created not allowed
                 <created value="2005-12-24" /> -->
@@ -173,8 +127,7 @@
                     </practiceSetting>
                     <!-- sourcePatientInfo moved below practiceSetting -->
                     <sourcePatientInfo>
-                        <reference value="urn:uuid:d117be39-1230-4df5-bbe4-5e29db6554e6" />
-                        <!-- raises an error in the valiator    <reference value="http://test.fhir.org/r3/Patient/1" /> -->
+                    <reference value="http://localhost:8080/xdstools6/fsim/default__fhir_support/fhir/Patient/9effb7e7-19a7-4a8e-a185-9fb5e17a0514" />
                     </sourcePatientInfo>
                 </context>
             </DocumentReference>
@@ -228,8 +181,7 @@
                     <text value="History and Physical" />
                 </type>
                 <subject>
-                    <reference value="urn:uuid:d117be39-1230-4df5-bbe4-5e29db6554e6" />
-                    <!-- raises an error in the valiator    <reference value="http://test.fhir.org/r3/Patient/1" /> -->
+                    <reference value="http://localhost:8080/xdstools6/fsim/default__fhir_support/fhir/Patient/9effb7e7-19a7-4a8e-a185-9fb5e17a0514" />
                 </subject>
                 <created value="2004-12-25T23:50:50-05:00" />
                 <author>

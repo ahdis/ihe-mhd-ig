@@ -91,7 +91,11 @@
                 "${workspaceRoot}/validator/org.hl7.fhir.validator.jar",
                 "${file}",
                 "-defn",
-                "${workspaceRoot}/validator/igpack.301.zip"
+                "${workspaceRoot}/validator/igpack.301.zip",
+                "-ig",
+                "${workspaceRoot}/resources/StructureDefinition/",
+                "-tx",
+                "n/a"
             ],
             "problemMatcher": {
                 "owner": "fhirvalidator",
@@ -120,7 +124,9 @@
             "args": [
                 "-jar",
                 "${workspaceRoot}/validator/org.hl7.fhir.validator.jar",
-                "${file}"
+                "${file}",
+                "-ig",
+                "${workspaceRoot}/resources/StructureDefinition/"
             ],
             "problemMatcher": {
                 "owner": "fhirvalidator",
