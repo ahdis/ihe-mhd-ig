@@ -22,6 +22,7 @@
             }
         },
         {
+            "fullUrl": "urn:uuid:e51800ef-a47b-438d-94a7-67890d433711",
             "resource": {
                 "resourceType": "DocumentManifest",
                 "status": "current",
@@ -37,7 +38,6 @@
         {
             "fullUrl": "urn:uuid:eabf70de-faa3-4777-a751-a62520049252",
             "resource": {
-                "identifier": "eabf70de-faa3-4777-a751-a62520049252",
                 "resourceType": "Binary",
                 "contentType": "text/plain",
                 "content": "dGhpcyBpcyBiYXNlNjQgZW5jb2RlZCB0ZXh0"
