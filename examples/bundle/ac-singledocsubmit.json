@@ -1,0 +1,51 @@
+{
+    "resourceType": "Bundle",
+    "id": "singledocsubmit",
+    "meta": {"profile": "http://ihe.net/fhir/tag/iti-65"},
+    "type": "transaction",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:e51800ef-a47b-438d-94a7-67890d433710",
+            "resource": {
+                "resourceType": "DocumentReference",
+                "status": "current",
+                "description": "Mini-Info",
+                "subject": {"reference": "http://hapi.fhir.org/baseDstu3/Patient/1189949"},
+                "content": [{"attachment": {
+                    "contentType": "text/plain",
+                    "url": "urn:uuid:eabf70de-faa3-4777-a751-a62520049252"
+                }}]
+            },
+            "request": {
+                "method": "POST",
+                "url": "DocumentReference"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "DocumentManifest",
+                "status": "current",
+                "description": "Mini-Info",
+                "subject": {"reference": "http://hapi.fhir.org/baseDstu3/Patient/1189949"},
+                "content": [{"pReference": {"reference": "urn:uuid:e51800ef-a47b-438d-94a7-67890d433710"}}]
+            },
+            "request": {
+                "method": "POST",
+                "url": "DocumentManifest"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:eabf70de-faa3-4777-a751-a62520049252",
+            "resource": {
+                "identifier": "eabf70de-faa3-4777-a751-a62520049252",
+                "resourceType": "Binary",
+                "contentType": "text/plain",
+                "content": "dGhpcyBpcyBiYXNlNjQgZW5jb2RlZCB0ZXh0"
+            },
+            "request": {
+                "method": "POST",
+                "url": "Binary"
+            }
+        }
+    ]
+}
