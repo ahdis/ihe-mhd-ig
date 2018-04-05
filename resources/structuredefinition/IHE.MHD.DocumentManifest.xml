@@ -1,17 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition 
-  xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="IHE.MHD.DocumentManifest" />
   <text>
-    <status value="additional" />
-    <div 
-      xmlns="http://www.w3.org/1999/xhtml">
-	StructureDefinition for DocumentManifest as represented in the Provide and Query interactions in the     IHE IT Infrastructure Technical Framework Supplement 
-      <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>
-    </div>
-  </text>
+    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
+	StructureDefinition for DocumentManifest as represented in the Provide and Query interactions in the 
+    IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a></div></text>
   <url value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentManifest" />
-  <name value="IheMhdDocumentManifest" />
+  <name value="IHE.MHD.DocumentManifest" />
   <title value="IHE MHD Profile on DocumentManifest (SubmissionSet)" />
   <status value="draft" />
   <experimental value="false" />
@@ -40,11 +35,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentManifest" />
   <derivation value="constraint" />
   <differential>
-    <element id="DocumentManifest">
-      <path value="DocumentManifest"/>
-      <min value="0"/>
-      <max value="*"/>
-    </element>
     <element id="DocumentManifest.masterIdentifier">
       <path value="DocumentManifest.masterIdentifier" />
       <min value="1" />

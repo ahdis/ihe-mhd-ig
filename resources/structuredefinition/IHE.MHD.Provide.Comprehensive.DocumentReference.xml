@@ -1,17 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition 
-  xmlns="http://hl7.org/fhir">
-  <id value="IHE.MHD.Provide.Comprehensive.DocumentReference" />
-  <text>
-    <status value="additional" />
-    <div 
-      xmlns="http://www.w3.org/1999/xhtml">
-	StructureDefinition for Provide DocumentResource resource within the Provide Document Bundle transaction with Comprehensive (XDS-on-FHIR) metadata compliance in the     IHE IT Infrastructure Technical Framework Supplement 
-      <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>
-    </div>
-  </text>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.MHD.Provide.Comprensive.DocumentReference" />
+    <text>
+    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
+	StructureDefinition for Provide DocumentResource resource within the Provide Document Bundle transaction with Comprehensive (XDS-on-FHIR) metadata compliance in the 
+    IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>
+	</div></text>
+
   <url value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Provide.Comprehensive.DocumentReference" />
-  <name value="IheMhdProvideComprehensiveDocumentReference" />
+  <name value="IHE.MHD.Provide.Comprehensive.DocumentReference" />
   <title value="IHE MHD Profile on DocumentReference (DocumentEntry) when used in the Provide Transaction with Comprehensive Metadata, see Table 3:4.3.1-3." />
   <status value="draft" />
   <experimental value="false" />
@@ -40,11 +37,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
   <derivation value="constraint" />
   <differential>
-    <element id="DocumentReference">
-      <path value="DocumentReference"/>
-      <min value="0"/>
-      <max value="*"/>
-    </element>
     <element id="DocumentReference.masterIdentifier">
       <path value="DocumentReference.masterIdentifier" />
       <comment value="See ITI TF-2x: Z.9.1.1 Identifier and CDA root plus extension." />

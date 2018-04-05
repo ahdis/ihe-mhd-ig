@@ -6,8 +6,8 @@
 	CapabilityStatement for the Document Responder actor in the 
     IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>
 	</div></text>
-  <url value="http://ihe.net/fhir/CapabilityStatement/IHE.MHD.DocumentResponder"/>
-  <name value="IheMhdDocumentResponder"/>
+  <url value="http://www.ihe.net/fhir/CapabilityStatement/IHE.MHD.DocumentResponder"/>
+  <name value="IHE.MHD.DocumentResponder"/>
   <title value="IHE ITI Mobile access to Health Documents (MHD) - Document Responder (server)"/>
   <status value="draft"/>
   <experimental value="false"/>
@@ -30,8 +30,7 @@
   <description value="see http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)"/>
   <copyright value="IHE"/>
   <kind value="requirements"/>
-  <fhirVersion value="3.0.1"/>
- 	<acceptUnknown value="both" />
+  <fhirVersion value="STU3"/>
   <format value="application/fhir+xml"/>
   <format value="application/fhir+json"/>
   <profile>

@@ -1,17 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition 
-  xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="IHE.MHD.ProvideDocumentBundle.Comprehensive" />
   <text>
-    <status value="additional" />
-    <div 
-      xmlns="http://www.w3.org/1999/xhtml">
-	StructureDefinition for Provide Document Bundle (ITI-65) transaction between the MHD Document Source and the MHD Document Recipient with Comprehensive (XDS-on-FHIR) metadata compliance in the     IHE IT Infrastructure Technical Framework Supplement 
-      <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>
-    </div>
-  </text>
+    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
+	StructureDefinition for Provide Document Bundle (ITI-65) transaction between the MHD Document Source and the MHD Document Recipient with Comprehensive (XDS-on-FHIR) metadata compliance in the 
+    IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>
+	</div></text>
   <url value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Comprehensive" />
-  <name value="IheMhdProvideDocumentBundleComprehensive" />
+  <name value="IHE.MHD.ProvideDocumentBundle.Comprehensive" />
   <title value="IHE MHD profile on Provide Document Bundle (ITI-65) transaction with Comprehensive Metadata" />
   <status value="draft" />
   <experimental value="false" />
@@ -40,28 +36,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle" />
   <derivation value="constraint" />
   <differential>
-    <element id="Bundle">
-      <path value="Bundle"/>
-      <min value="0"/>
-      <max value="*"/>
-    </element>
-    <element id="Bundle.meta">
-      <path value="Bundle.meta"/> 
-      <short value="Metadata about the resource"/> 
-      <definition value="The metadata about the resource. This is content that is maintained by the infrastructure.
-       Changes to the content may not always be associated with version changes to the resource."/> 
-      <min value="1"/> 
-      <max value="1"/> 
-      <base> 
-        <path value="Resource.meta"/> 
-        <min value="0"/> 
-        <max value="1"/> 
-      </base> 
-      <type> 
-        <code value="Meta"/> 
-      </type> 
-      <isSummary value="true"/> 
-    </element> 
     <element id="Bundle.meta.profile">
       <path value="Bundle.meta.profile" />
       <short value="ITI-65" />
@@ -73,7 +47,7 @@
     <element id="Bundle.type">
       <path value="Bundle.type" />
       <short value="transaction" />
-      <fixedCode value="transaction" />
+      <fixedCode value="transaction " />
     </element>
     <element id="Bundle.entry">
       <path value="Bundle.entry" />

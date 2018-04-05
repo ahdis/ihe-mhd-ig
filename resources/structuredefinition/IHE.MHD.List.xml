@@ -7,7 +7,7 @@
     IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>
 	</div></text>
   <url value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.List" />
-  <name value="IheMhdList" />
+  <name value="IHE.MHD.List" />
   <title value="IHE MHD Profile on List (Folder)" />
   <status value="draft" />
   <experimental value="false" />
@@ -36,11 +36,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/List" />
   <derivation value="constraint" />
   <differential>
-      <element id="List">
-      <path value="List"/>
-      <min value="0"/>
-      <max value="*"/>
-    </element>
     <element id="List.identifier">
       <path value="List.identifier" />
       <comment value="When the List.identifier carries the entryUUID then the List.identifier.use shall be ‘official’; and the uniqueId then the List.identifier.use shall be&#xD;&#xA;‘usual’." />
