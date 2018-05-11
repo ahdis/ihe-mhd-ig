@@ -42,7 +42,7 @@
             }
         },
         {
-            "label": "validate ressource with STU3 with ig without terminology server",
+            "label": "validate ressource with STU3 without terminology server now",
             "command": "java",
             "args": [
                 "-jar",
@@ -50,14 +50,6 @@
                 "${file}",
                 "-defn",
                 "${workspaceRoot}/validator/igpack.301.zip",
-                "-ig",
-                "${workspaceRoot}/resources/ValueSet/",
-                "-ig",
-                "${workspaceRoot}/resources/CodeSystem/",
-                "-ig",
-                "${workspaceRoot}/resources/StructureDefinition/",
-                "-profile",
-                "http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal",
                 "-tx",
                 "n/a"
             ],
@@ -84,7 +76,7 @@
             }
         },
         {
-            "label": "validate ressource with STU3",
+            "label": "validate ressource with IG (STU3)",
             "command": "java",
             "args": [
                 "-jar",
@@ -93,7 +85,7 @@
                 "-defn",
                 "${workspaceRoot}/validator/igpack.301.zip",
                 "-ig",
-                "${workspaceRoot}/resources/StructureDefinition/",
+                "${workspaceRoot}/output",
                 "-tx",
                 "n/a"
             ],
