@@ -42,6 +42,10 @@ java -jar ./validator/org.hl7.fhir.validator.jar ./examples/bundle/singledocsubm
 
 pubished on ftp://ftp.ihe.net/TF_Implementation_Material/fhir/ to be discussed with ihe
 
+
+
+
+
 1. Typos search/replace Comprensive, Comprenensive -> Comprehensive
 
 2. Canonical Url of CodeSystem ist not correct
@@ -49,8 +53,7 @@ pubished on ftp://ftp.ihe.net/TF_Implementation_Material/fhir/ to be discussed w
     --> 
 	<url value="http://ihe.net/fhir/CodeSystem/IHE.formatcode.cs"/>
 
-3. Replace in CapabilityStatements <url value="http://www.ihe.net.. />with <url value="http://ihe.net    
-
+3. -
 4. remove type of filenames to harmonize with id internally (IG Publisher needs that)
    can use script ./rm
 
@@ -58,66 +61,16 @@ pubished on ftp://ftp.ihe.net/TF_Implementation_Material/fhir/ to be discussed w
 
     switch from sourceUri to sourceReference
 
-6.  IHE.MHD.DocumentSource, 
-    IHE.MHD.DocumentConsumer,
-    IHE.MHD.DocumentRecipient,
-    IHE.MHD.DocumentResponder
-     -> CapabiltyStatement instead of StructureDefinition
+6.  -
 
-7. StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal and StructureDefinition/IHE.MHD.ProvideDocumentBundle.Comprehensive: StructureDefinition.differential.element[2].fixedCode: StructureDefinition.differential.element[2].fixedCode	error	The code 'transaction ' is not valid (whitespace rules)
+7. -
+8. -
+9. -
+10. -
+11.-
+ 
 
-8. 
-CapabilityStatement/IHE.MHD.DocumentRecipient: CapabilityStatement	error	There can only be one REST declaration per mode. [rest.select(mode).isDistinct()]
-CapabilityStatement/IHE.MHD.DocumentRecipient: CapabilityStatement	error	Profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement, Element 'CapabilityStatement.status': minimum required = 1, but only found 0
-CapabilityStatement/IHE.MHD.DocumentRecipient: CapabilityStatement	error	Profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement, Element 'CapabilityStatement.acceptUnknown': minimum required = 1, but only found 0
-CapabilityStatement/IHE.MHD.DocumentRecipient: CapabilityStatement.jurisdiction	warning	None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/jurisdiction (http://hl7.org/fhir/ValueSet/jurisdiction, and a code should come from this value set unless it has no suitable code) (codes = http://unstats.un.org/unsd/methods/m49/m49.htm#001)
-CapabilityStatement/IHE.MHD.DocumentRecipient: CapabilityStatement.implementationGuide	error	URI values cannot have whitespace
-
-9. replace value="STU3" in IHE.MHD.DocumentConsumer, Responder with "3.0.1"
-
-10. CapabilityStatement/IHE.MHD.DocumentSource: CapabilityStatement	error	There can only be one REST declaration per mode. [rest.select(mode).isDistinct()]
-CapabilityStatement/IHE.MHD.DocumentSource: CapabilityStatement	error	Profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement, Element 'CapabilityStatement.status': minimum required = 1, but only found 0
-CapabilityStatement/IHE.MHD.DocumentSource: CapabilityStatement	error	Profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement, Element 'CapabilityStatement.acceptUnknown': minimum required = 1, but only found 0
-CapabilityStatement/IHE.MHD.DocumentSource: CapabilityStatement.jurisdiction	warning	None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/jurisdiction (http://hl7.org/fhir/ValueSet/jurisdiction, and a code should come from this value set unless it has no suitable code) (codes = http://unstats.un.org/unsd/methods/m49/m49.htm#001)
-CapabilityStatement/IHE.MHD.DocumentSource: CapabilityStatement.implementationGuide	error	URI values cannot have whitespace
-
-11. For all StructureDefintion in the differential you need a first Element wich describes the derived type
-
-   e.g 
-   <differential>
-    <element id="DocumentManifest">
-      <path value="DocumentManifest"/>
-      <min value="0"/>
-      <max value="*"/>
-    </element>
-
-12.  Error generatingsnapshot: Error sorting Differential: StructureDefinition http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal: Differential contains path Bundle.meta.profile which is not found in the base, add in IHE.MHD.ProvideDocumentBundle.Minimal and IHE.MHD.ProvideDocumentBundle.Comprehensive
-
-    <element id="Bundle.meta">
-      <path value="Bundle.meta"/> 
-      <short value="Metadata about the resource"/> 
-      <definition value="The metadata about the resource. This is content that is maintained by the infrastructure.
-       Changes to the content may not always be associated with version changes to the resource."/> 
-      <min value="1"/> 
-      <max value="1"/> 
-      <base> 
-        <path value="Resource.meta"/> 
-        <min value="0"/> 
-        <max value="1"/> 
-      </base> 
-      <type> 
-        <code value="Meta"/> 
-      </type> 
-      <isSummary value="true"/> 
-    </element> 
-    <element id="Bundle.meta.profile">
-      <path value="Bundle.meta.profile" />
-      <short value="ITI-65" />
-      <definition value="IHE MHD Provide Document Bundle transaction" />
-      <min value="1" />
-      <max value="1" />
-      <fixedUri value="http://ihe.net/fhir/tag/iti-65" />
-    </element>
+12.  -
 
     13. Slicing on discriminator type/resource instead of full resource
 
@@ -130,6 +83,23 @@ CapabilityStatement/IHE.MHD.DocumentSource: CapabilityStatement.implementationGu
       </slicing>
 
       and      <code value="Resource" /> needs to be set to resource accordingly      <code value="DocumentManifest" />
+
+
+14. Remove prefix "IHE " in URI's 
+
+CapabilityStatement/IHE.MHD.DocumentSource
+CapabilityStatement/IHE.MHD.DocumentRecipient
+
+15. As specified by profile http://hl7.org/fhir/StructureDefinition/ElementDefinition, 
+Element 'targetProfile' is out of order
+
+move aggregate Element below
+IHE.MHD.Provide.Comprehensive.DocumentReference.xml
+IHE.MHD.Provide.Minimal.DocumentReference.xml
+IHE.MHD.Query.Comprehensive.DocumentReference.xml
+IHE.MHD.Query.Minimal.DocumentReference.xml
+
+16. Check slicing on DocumentManifest.content.pAttachment
 
 ## setup
 

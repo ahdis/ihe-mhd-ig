@@ -4,7 +4,7 @@ cd CapabilityStatement
 lcd ..
 lcd resources
 lcd CapabilityStatement
-mget *.xml
+mget *MHD*.xml
 cd ..
 lcd ..
 cd CodeSystem
@@ -14,12 +14,12 @@ cd ..
 lcd ..
 cd ImplementationGuide
 lcd ImplementationGuide
-mget *.xml
+mget *MHD*.xml
 cd ..
 lcd ..
 cd StructureDefinition
 lcd StructureDefinition
-mget *.xml
+mget *MHD*.xml
 cd ..
 lcd ..
 cd ValueSet
