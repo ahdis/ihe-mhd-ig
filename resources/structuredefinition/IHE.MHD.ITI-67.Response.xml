@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition 
+	xmlns="http://hl7.org/fhir">
+	<id value="IHE.MHD.ITI-67.Response" />
+	<text>
+		<status value="additional" />
+		<div 
+			xmlns="http://www.w3.org/1999/xhtml">
+	StructureDefinition for Find Document References [ITI-67] between the MHD Document Responder and the MHD Document Consumer. IHE IT Infrastructure Technical Framework Supplement
+      			
+			<a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>
+    References              			
+			<a href="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentManifest.xml" />
+		</div>
+	</text>
+	<url value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ITI-67.Response" />
+	<name value="IheMhdIti67Response" />
+	<title value="IHE MHD profile on transaction. Response message" />
+	<status value="draft" />
+	<experimental value="false" />
+	<date value="2018-05-13" />
+	<publisher value="Integrating the Healthcare Enterprise (IHE)" />
+	<contact>
+		<name value="IHE" />
+		<telecom>
+			<system value="url" />
+			<value value="http://ihe.net" />
+		</telecom>
+	</contact>
+	<contact>
+		<name value="Oliver.Egger" />
+		<telecom>
+			<system value="email" />
+			<value value="oliver.egger@ahdis.ch" />
+		</telecom>
+	</contact>
+	<description value="IHE MHD profile on Find Document References (ITI-67) transaction. Response message" />
+	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+	<fhirVersion value="3.0.1" />
+	<kind value="resource" />
+	<abstract value="false" />
+	<type value="Bundle" />
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle" />
+	<derivation value="constraint" />
+	<differential>
+		<element id="Bundle">
+			<path value="Bundle"/>
+			<min value="0"/>
+			<max value="*"/>
+		</element>
+		<element id="Bundle.type">
+			<path value="Bundle.type" />
+			<short value="searchset" />
+			<fixedCode value="searchset" />
+		</element>
+		<element id="Bundle.entry">
+			<path value="Bundle.entry" />
+			<slicing>
+				<discriminator>
+					<type value="type" />
+					<path value="resource" />
+				</discriminator>
+				<rules value="closed" />
+			</slicing>
+		</element>
+		<element id="Bundle.entry:DocumentReference">
+			<path value="Bundle.entry" />
+			<sliceName value="DocumentReference" />
+			<short value="DocumentReference" />
+			<min value="0" />
+			<max value="*" />
+		</element>
+		<element id="Bundle.entry:DocumentReference.fullUrl">
+			<path value="Bundle.entry.fullUrl" />
+			<min value="1" />
+		</element>
+		<element id="Bundle.entry:DocumentReference.resource">
+			<path value="Bundle.entry.resource" />
+			<min value="1" />
+			<type>
+				<code value="DocumentReference" />
+				<profile value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Provide.Minimal.DocumentReference" />
+			</type>
+		</element>
+		<element id="Bundle.entry:OperationOutcome">
+			<path value="Bundle.entry"/>
+			<sliceName value="OperationOutcome"/>
+			<short value="OperationOutcome"/>
+			<definition value="If the Document Responder is sending warnings, the Bundle Resource shall also contain an OperationOutcome Resource that contains those warnings"/>
+			<min value="0"/>
+			<max value="*"/>
+		</element>
+		<element id="Bundle.entry:OperationOutcome.fullUrl">
+			<path value="Bundle.entry.fullUrl" />
+			<min value="1" />
+		</element>
+		<element id="Bundle.entry:OperationOutcome.resource">
+			<path value="Bundle.entry.resource" />
+			<min value="1" />
+			<type>
+				<code value="OperationOutcome" />
+				<profile value="http://hl7.org/fhir/StructureDefinition/OperationOutcome" />
+			</type>
+		</element>
+	</differential>
+</StructureDefinition>

@@ -61,7 +61,7 @@
                     <text value="History and Physical"/>
                 </type>
                 <subject>
-                    <reference value="http://hapi.fhir.org/baseDstu3/Patient/665683"/>
+                    <reference value="Patient/665683"/>
                 </subject>
                 <created value="2004-12-25T23:50:50-05:00"/>
                 <author>
@@ -74,7 +74,7 @@
                 <description value="Physical"/>
                 <content>
                     <pReference>
-                        <reference value="http://hapi.fhir.org/baseDstu3/DocumentReference/3538602"/>
+                        <reference value="DocumentReference/3538602"/>
                     </pReference>
                 </content>
             </DocumentManifest>
