@@ -6,13 +6,14 @@
 		<status value="additional" />
 		<div 
 			xmlns="http://www.w3.org/1999/xhtml">
-	StructureDefinition for DocumentManifest as represented in the Provide and Query interactions in the     IHE IT Infrastructure Technical Framework Supplement 
+	StructureDefinition for DocumentManifest as represented in the Provide and Query interactions in the     IHE IT Infrastructure Technical Framework Supplement 			
 			<a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>.
 	The IHE MHD Profile text is Normative, this conformance resource is Informative.
+		
 		</div>
 	</text>
 	<url value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentManifest" />
-	<name value="IHE.MHD.DocumentManifest" />
+	<name value="IheMhdDocumentManifest" />
 	<title value="IHE MHD Profile on DocumentManifest (SubmissionSet)" />
 	<status value="active" />
 	<experimental value="false" />
@@ -47,11 +48,11 @@
 	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentManifest" />
 	<derivation value="constraint" />
 	<differential>
-    <element id="DocumentManifest">
-      <path value="DocumentManifest"/>
-      <min value="0"/>
-      <max value="*"/>
-    </element>	
+		<element id="DocumentManifest">
+			<path value="DocumentManifest"/>
+			<min value="0"/>
+			<max value="*"/>
+		</element>
 		<element id="DocumentManifest.text">
 			<path value="DocumentManifest.text" />
 			<mapping>
@@ -129,13 +130,9 @@
 				<targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
 			</type>
 		</element>
-<!-- FIXME		
-		<element id="DocumentManifest.content.pAttachment">
-			<path value="DocumentManifest.content.pAttachment" />
-			<comment value="These HL7 FHIR STU3 elements are not used in XDS, therefore would not be present. Document Consumers should be robust to these elements holding values." />
-			<max value="0" />
-		</element>
--->		
+		<!-- FIXME		
+		<element id="DocumentManifest.content.pAttachment"><path value="DocumentManifest.content.pAttachment" /><comment value="These HL7 FHIR STU3 elements are not used in XDS, therefore would not be present. Document Consumers should be robust to these elements holding values." /><max value="0" /></element>
+-->
 		<element id="DocumentManifest.related">
 			<path value="DocumentManifest.related" />
 			<comment value="These HL7 FHIR STU3 elements are not used in XDS, therefore would not be present. Document Consumers should be robust to these elements holding values." />

@@ -13,7 +13,7 @@
     </div>
   </text>
   <url value="http://ihe.net/fhir/tag/iti-65" />
-  <name value="IheMhdIti65Minimal" />
+  <name value="IheMhdIti65Response" />
   <title value="IHE MHD profile on Provide Document Bundle (ITI-65) transaction with Minimal Metadata" />
   <status value="draft" />
   <experimental value="false" />
@@ -30,7 +30,7 @@
     <name value="Oliver.Egger" />
     <telecom>
       <system value="email" />
-      <value value="oliver.egger@ahdds.ch" />
+      <value value="oliver.egger@ahdis.ch" />
     </telecom>
   </contact>
   <description value="Profile on Transaction Bundle based on IHE IT Infrastructure Technical Framework Supplement - Mobile access to Health Documents (MHD) Rev. 2.3.  See http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)" />

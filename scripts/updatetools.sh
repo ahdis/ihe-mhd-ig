@@ -6,4 +6,5 @@ wget http://build.fhir.org/validator.zip
 unzip ./validator.zip
 rm validator.zip
 rm readme.txt
+# cp /Users/oliveregger/fhir/trunk/build/publish/org.hl7.fhir.validator.jar ../validator
 # cp /Users/oliveregger/fhir/trunk/build/publish/org.hl7.fhir.igpublisher.jar ../igpublisher/

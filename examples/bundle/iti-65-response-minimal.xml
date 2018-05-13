@@ -1,0 +1,24 @@
+<Bundle 
+    xmlns="http://hl7.org/fhir">
+    <id value="iti-65-response-minimal"/>
+    <meta>
+        <!-- just for triggering validation purposes, not required in implementations -->
+        <profile value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ITI-65.Response" />
+    </meta>
+    <type value="transaction-response" />
+    <entry>
+        <response>
+            <status value="201" />
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201" />
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201" />
+        </response>
+    </entry>
+</Bundle>

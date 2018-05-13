@@ -6,10 +6,10 @@
 		<status value="additional" />
 		<div 
 			xmlns="http://www.w3.org/1999/xhtml">
-	StructureDefinition for Provide Document Bundle (ITI-65) transaction between the MHD Document Source and the MHD Document Recipient with Minimal metadata compliance in the     IHE IT Infrastructure Technical Framework Supplement 
+	StructureDefinition for Provide Document Bundle (ITI-65) transaction between the MHD Document Source and the MHD Document Recipient with Minimal metadata compliance in the     IHE IT Infrastructure Technical Framework Supplement 			
 			<a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>.
 	The IHE MHD Profile text is Normative, this conformance resource is Informative.
-		
+				
 		</div>
 	</text>
 	<url value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal" />
@@ -48,6 +48,11 @@
 	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle" />
 	<derivation value="constraint" />
 	<differential>
+		<element id="Bundle">
+			<path value="Bundle"/>
+			<min value="0"/>
+			<max value="*"/>
+		</element>
 		<element id="Bundle.meta.profile">
 			<path value="Bundle.meta.profile" />
 			<short value="ITI-65" />
@@ -86,7 +91,7 @@
 			<path value="Bundle.entry.resource" />
 			<min value="1" />
 			<type>
-	        <code value="DocumentManifest" />
+				<code value="DocumentManifest" />
 				<profile value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentManifest" />
 			</type>
 		</element>
@@ -137,7 +142,7 @@
 			<path value="Bundle.entry.resource" />
 			<min value="1" />
 			<type>
-	        <code value="List" />
+				<code value="List" />
 				<profile value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.List" />
 			</type>
 		</element>
@@ -163,7 +168,7 @@
 			<path value="Bundle.entry.resource" />
 			<min value="1" />
 			<type>
-        <code value="Binary" />
+				<code value="Binary" />
 				<profile value="http://hl7.org/fhir/StructureDefinition/Binary" />
 			</type>
 		</element>

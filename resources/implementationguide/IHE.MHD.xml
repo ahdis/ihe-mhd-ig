@@ -163,16 +163,48 @@
       </sourceReference>
     </resource>
     <resource>
+      <example value="false" />
+      <name value="Provide Document Bundle [ITI-65] - Response" />
+      <description value="Profile on Response of Transaction Bundle (ITI-65) based on IHE IT MHD" />
+      <sourceReference>
+        <reference value="StructureDefinition/IHE.MHD.ITI-65.Response" />
+      </sourceReference>
+    </resource>
+    <resource>
       <example value="true" />
-      <name value="NIST XdsTools5 SubmitBundle" />
+      <name value="NIST XdsTools6 Provide Document Bundle - adapted" />
       <description value="Provide Document Bundle [ITI-65]" />
       <sourceReference>
-        <reference value="Bundle/singledocsubmit" />
+        <reference value="Bundle/iti-65-request-xdstools-adapted" />
       </sourceReference>
       <exampleFor>
         <reference value="StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal" />
       </exampleFor>
     </resource>
+    <resource>
+      <example value="true" />
+      <name value="Provide Document Bundle [ITI-65] Response - Minimal" />
+      <description value="Provide Document Bundle [ITI-65] Response - Minimal" />
+      <sourceReference>
+        <reference value="Bundle/iti-65-response-minimal" />
+      </sourceReference>
+      <exampleFor>
+        <reference value="StructureDefinition/IHE.MHD.ITI-65.Response" />
+      </exampleFor>
+    </resource>
+<!--    
+    <resource>
+      <example value="true" />
+      <name value="Provide Document Bundle [ITI-65] Response - Full" />
+      <description value="Provide Document Bundle [ITI-65] Response - Full" />
+      <sourceReference>
+        <reference value="Bundle/iti-65-response-full" />
+      </sourceReference>
+      <exampleFor>
+        <reference value="StructureDefinition/IHE.MHD.ITI-65.Response" />
+      </exampleFor>
+    </resource>
+    -->
   </package>
   <!-- added for ig -->
   <page>

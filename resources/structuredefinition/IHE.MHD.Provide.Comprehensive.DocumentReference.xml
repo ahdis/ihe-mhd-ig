@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition 
+	xmlns="http://hl7.org/fhir">
 	<id value="IHE.MHD.Provide.Comprehensive.DocumentReference" />
 	<text>
 		<status value="additional" />
-		<div xmlns="http://www.w3.org/1999/xhtml">
-	StructureDefinition for DocumentRefeence as represented in the Provide Document Bundle (ITI-65) transaction with Comprehensive (XDS-on-FHIR) metadata compliance in the 
-    IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>. 
-	The IHE MHD Profile text is Normative, this conformance resource is Informative.
+		<div 
+			xmlns="http://www.w3.org/1999/xhtml">
+	StructureDefinition for DocumentRefeence as represented in the Provide Document Bundle (ITI-65) transaction with Comprehensive (XDS-on-FHIR) metadata compliance in the     IHE IT Infrastructure Technical Framework Supplement 
+			<a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>. 	The IHE MHD Profile text is Normative, this conformance resource is Informative.
+		
 		</div>
 	</text>
 	<url value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Provide.Comprehensive.DocumentReference" />
-	<name value="IHE.MHD.Provide.Comprehensive.DocumentReference" />
+	<name value="IheMhdProvideComprehensiveDocumentReference" />
 	<title value="IHE MHD Profile on DocumentReference (DocumentEntry) when used in the Provide Transaction with Comprehensive (aka XDS-on-FHIR) Metadata, see Table 3:4.3.1-3." />
 	<status value="active" />
 	<experimental value="false" />
@@ -36,7 +38,7 @@
 			<system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
 			<code value="001"/>
 		</coding>
-	</jurisdiction>	
+	</jurisdiction>
 	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
 	<fhirVersion value="3.0.1" />
 	<kind value="resource" />
@@ -45,6 +47,11 @@
 	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
 	<derivation value="constraint" />
 	<differential>
+		<element id="DocumentReference">
+			<path value="DocumentReference"/>
+			<min value="0"/>
+			<max value="*"/>
+		</element>
 		<element id="DocumentReference.masterIdentifier">
 			<path value="DocumentReference.masterIdentifier" />
 			<comment value="See ITI TF-2x: Z.9.1.1 Identifier and CDA root plus extension." />
@@ -69,7 +76,7 @@
 		<element id="DocumentReference.type">
 			<path value="DocumentReference.type" />
 			<mustSupport value="true" />
-		</element>	
+		</element>
 		<element id="DocumentReference.class">
 			<path value="DocumentReference.class" />
 			<min value="1" />
