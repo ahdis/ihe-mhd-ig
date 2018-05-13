@@ -40,78 +40,83 @@ java -jar ./validator/org.hl7.fhir.validator.jar ./examples/bundle/singledocsubm
 
 ## current changes to IHE Implementation material 
 
+In order to work with the IGPublisher setup a few 
+
 pubished on ftp://ftp.ihe.net/TF_Implementation_Material/fhir/ to be discussed with ihe
 
 
+1. IHE.MHD.xml
 
+In the Implementation Guide Resource IHE uses sourceUri:
 
+```xml
+		<resource>
+			<example value="false" />
+			<name value="DocumentReference profile Provide Minimal Metadata" />
+			<description value="Constraints on DocumentReference resource in a Provide with Minimal Metadata" />
+			<sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Provide.Minimal.DocumentReference" />
+		</resource>
+````
 
-1. Typos search/replace Comprensive, Comprenensive -> Comprehensive
+IGPublisher needs:
 
-2. Canonical Url of CodeSystem ist not correct
-	<url value="http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem"/>
-    --> 
-	<url value="http://ihe.net/fhir/CodeSystem/IHE.formatcode.cs"/>
-
-3. -
-4. remove type of filenames to harmonize with id internally (IG Publisher needs that)
-   can use script ./rm
-
-5. in ImplementationGuide\IHE.MHD.xml (others need to be done to):
-
-    switch from sourceUri to sourceReference
-
-6.  -
-
-7. -
-8. -
-9. -
-10. -
-11.-
- 
-
-12.  -
-
-    13. Slicing on discriminator type/resource instead of full resource
-
-          <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="resource" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-
-      and      <code value="Resource" /> needs to be set to resource accordingly      <code value="DocumentManifest" />
-
-
-14. Remove prefix "IHE " in URI's 
-
-CapabilityStatement/IHE.MHD.DocumentSource
-CapabilityStatement/IHE.MHD.DocumentRecipient
-
-15. As specified by profile http://hl7.org/fhir/StructureDefinition/ElementDefinition, 
-Element 'targetProfile' is out of order
-
-move aggregate Element below
-IHE.MHD.Provide.Comprehensive.DocumentReference.xml
-IHE.MHD.Provide.Minimal.DocumentReference.xml
-IHE.MHD.Query.Comprehensive.DocumentReference.xml
-IHE.MHD.Query.Minimal.DocumentReference.xml
-
-16. Check slicing on DocumentManifest.content.pAttachment
-
-## setup
-
-1. Copy the authorative conformance resources to the resources directoy with ftp (or any other way) into
-the resources directory.
-
+```xml
+   <resource>
+      <example value="false" />
+      <name value="DocumentReference profile Provide Comprehensive Metadata (XDS on FHIR)" />
+      <description value="Constraints on DocumentReference resource in a Provide with Comprehensive Metadata" />
+      <sourceReference>
+        <reference value="StructureDefinition/IHE.MHD.Provide.Comprehensive.DocumentReference" />
+      </sourceReference>
+    </resource>
 ```
-cd scripts
-./ftpihenet.sh
-```
-This script uses ftp client. OSX: If you have no ftp client availabe in the commandline du to High Sierra install it via [homebrew](https://apple.stackexchange.com/questions/299758/how-to-get-bsd-ftp-and-telnet-back-in-10-13-high-sierra)
 
+2. IHE.MHD.DocumentManifest.xml
+
+IGPublisher needs as a first differential Element the resource name by itself, otherwise the display is broken:
+
+```xml
+		<element id="DocumentManifest">
+			<path value="DocumentManifest"/>
+			<min value="0"/>
+			<max value="*"/>
+		</element>
 ```
-brew install tnftp
+
+element id for pRefernce needs to be changed to
+
+```xml
+		<element id="DocumentManifest.content.p[x]:pReference">
 ```
+
+from 
+```xml
+		<element id="DocumentManifest.content.pReference:pReference">
+```
+pAttachment needs to be corrected (TODO):
+
+```xml
+		<!-- FIXME		
+		<element id="DocumentManifest.content.pAttachment"><path value="DocumentManifest.content.pAttachment" /><comment value="These HL7 FHIR STU3 elements are not used in XDS, therefore would not be present. Document Consumers should be robust to these elements holding values." /><max value="0" /></element>
+-->
+```
+
+3. First differential Resource Element also fo IHE.Mhd.List, IHE.MHD.Provide.Comprehensive.DocumentReference, IHE.MHD.Provide.Minimal.DocumentReference, IHE.MHD.ProvideDocumentBundle.Comprehensive, IHE.MHD.ProvideDocumentBundle.Minimal, IHE.MHD.Query.Comprehensive.DocumentReference, IHE.MHD.Query.Minimal.DocumentReference
+
+4. IHE.MHD.ProvideDocumentBundle.Comprehensive, IHE.MHD.ProvideDocumentBundle.Minimal
+
+Use code DocumentReference instead of Resource (also for List, Binary)
+```xml
+		<element id="Bundle.entry:DocumentReference.resource">
+			<path value="Bundle.entry.resource" />
+			<min value="1" />
+			<type>
+<!-- HEAD -->
+				<code value="DocumentReference" />
+=======
+				<code value="Resource" />
+<!-- IHE_TF_Impl_Material_MHD -->
+				<profile value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Provide.Comprehensive.DocumentReference" />
+			</type>
+```xml
+

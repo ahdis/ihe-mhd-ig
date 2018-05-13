@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition 
-	xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir">
 	<id value="IHE.MHD.List" />
 	<text>
 		<status value="additional" />
-		<div 
-			xmlns="http://www.w3.org/1999/xhtml">
-	StructureDefinition for List Resource supporting XDS Folders in the     IHE IT Infrastructure Technical Framework Supplement 
-			<a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>. 	The IHE MHD Profile text is Normative, this conformance resource is Informative.
-		</div>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+	StructureDefinition for List Resource supporting XDS Folders in the 
+    IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>. 
+	The IHE MHD Profile text is Normative, this conformance resource is Informative.</div>
 	</text>
 	<url value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.List" />
-	<name value="IheMhdList" />
+	<name value="IHE.MHD.List" />
 	<title value="IHE MHD Profile on List (Folder)" />
 	<status value="active" />
 	<experimental value="false" />
@@ -37,7 +35,7 @@
 			<system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
 			<code value="001"/>
 		</coding>
-	</jurisdiction>
+	</jurisdiction>	
 	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
 	<fhirVersion value="3.0.1" />
 	<kind value="resource" />
