@@ -120,3 +120,20 @@ Use code DocumentReference instead of Resource (also for List, Binary)
 			</type>
 ```xml
 
+5. CapabilityStatement/IHE.MHD.DocumentConsumer: CapabilityStatement.profile[2]	error	Unable to resolve resource 'http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Comprensive.DocumentReference'
+
+needs to be fixed to
+```xml
+		<reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Comprehensive.DocumentReference" />
+```
+
+6. Adjust IHE.MHD.xml to IHE.FormatCode.codesystem, rename file to IHE.FormatCode.codesystem.xml
+
+    <resource>
+      <example value="false" />
+      <name value="IHE FormatCode CodeSystem" />
+      <description value="IHE FormatCode CodeSystem" />
+      <sourceReference>
+        <reference value="CodeSystem/IHE.FormatCode.codesystem" />
+      </sourceReference>
+    </resource>
