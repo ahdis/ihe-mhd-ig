@@ -18,7 +18,7 @@ mv IHE.MHD.DocumentSource.capabilitystatement.xml IHE.MHD.DocumentSource.xml
 cd ..
 cd codesystem
 rm IHE.NPFSm.*.xml
-mv IHE.formatcode.codesystem.xml IHE.formatcode.cs.xml
+mv IHE.formatcode.codesystem.xml IHE.FormatCode.codesystem.xml
 cd ..
 cd valueset
 mv IHE.formatcode.valueset.xml IHE.formatcode.vs.xml
