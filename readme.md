@@ -7,17 +7,29 @@ The [IG Publisher](http://wiki.hl7.org/index.php?title=IG_Publisher_Documentatio
 
 you can now validate example files against the built ig:
 ```
-java -jar ./validator/org.hl7.fhir.validator.jar ./examples/bundle/singledocsubmit.xml -defn ./validator/igpack.301.zip -ig http://build.fhir.org/ig/ahdis/ihe-mhd-ig
- .. load FHIR from ./validator/igpack.301.zip
+java -jar ./validator/org.hl7.fhir.validator.jar ./examples/bundle/iti-65-request-xdstools-adapted.xml -defn ./validator/igpack.301.zip -ig http://build.fhir.org/ig/ahdis/ihe-mhd-ig
+  .. load FHIR from ./validator/igpack.301.zip
   .. connect to tx server @ http://tx.fhir.org/r4
+-tx: Connect to http://tx.fhir.org/r4
     (v3.0.1-11917)
 +  .. load IG from http://build.fhir.org/ig/ahdis/ihe-mhd-ig
   .. validate
-*FAILURE* validating ./examples/bundle/singledocsubmit.xml:  error:4 warn:4 info:28
-  Error @ Bundle.entry[2].resource.author[1] (line 128, col25) : SHALL have a contained resource if a local reference is provided ( (url: a3; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-  ...
+-tx: Terminology server: Check for supported code systems for http://loinc.org
+-tx: Terminology Server: $expand on Include 6401 codes from http://loinc.org
+-tx: Terminology Server: $validate-code system=urn:oid:1.3.6.1.4.1.21367.2017.3, code=34133-9, display=Summary of Episode Note, valueset=Include 6401 codes from http://loinc.org
+-tx: Terminology Server: $expand on Include 55 codes from urn:ietf:bcp:47
+-tx: Terminology Server: $validate-code system=urn:oid:1.3.6.1.4.1.21367.2017.3, code=urn:ihe:iti:appc:2016:consent, display=null, valueset=Include All codes from urn:oid:1.3.6.1.4.1.19376.1.2.3
+-tx: Terminology Server: $validate-code system=urn:oid:1.3.6.1.4.1.21367.2017.3, code=34746-8, display=Nursing Evaluation and Management Note, valueset=Include 6401 codes from http://loinc.org
+Success...validating ./examples/bundle/iti-65-request-xdstools-adapted.xml:  error:0 warn:2 info:27
+  Information @ Bundle.entry[1].resource[1].text[1] (line 13, col15) : Instance includes element that is not marked as 'mustSupport' and was validated against profiles declaring mustSupport=true
+  Information @ Bundle.entry[1].resource[1].contained[1] (line 21, col20) : Instance includes element that is not marked as 'mustSupport' and was validated against profiles declaring mustSupport=true
+  Information @ Bundle.entry[1].resource[1].contained[2] (line 36, col20) : Instance includes element that is not marked as 'mustSupport' and was validated against profiles declaring mustSupport=true
+
 ```
-still working on the errors :-) should give the same results as on the [Validation Results for IHE.MHD](http://build.fhir.org/ig/ahdis/ihe-mhd-ig/qa.htm) if you use one of the examples in the implementation guide.
+
+Please note, above includes the patch for the validator which is not yet in the offical build [gforge](https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&tracker_item_id=15757&start=0)
+
+should give the same results as on the [Validation Results for IHE.MHD](http://build.fhir.org/ig/ahdis/ihe-mhd-ig/qa.htm) if you use one of the examples in the implementation guide.
 
 # using the validator locally
 

@@ -171,6 +171,14 @@
       </sourceReference>
     </resource>
     <resource>
+      <example value="false" />
+      <name value="Find Document Manifests Response Message [ITI-66]" />
+      <description value="Find Document Manifests Response Message [ITI-66]" />
+      <sourceReference>
+        <reference value="StructureDefinition/IHE.MHD.ITI-66.Response" />
+      </sourceReference>
+    </resource>
+    <resource>
       <example value="true" />
       <name value="NIST XdsTools6 Provide Document Bundle - adapted" />
       <description value="Provide Document Bundle [ITI-65]" />
@@ -191,20 +199,18 @@
       <exampleFor>
         <reference value="StructureDefinition/IHE.MHD.ITI-65.Response" />
       </exampleFor>
-    </resource>
-<!--    
+    </resource>    
     <resource>
       <example value="true" />
-      <name value="Provide Document Bundle [ITI-65] Response - Full" />
-      <description value="Provide Document Bundle [ITI-65] Response - Full" />
+      <name value="Example Find Document Manifests Response Message [ITI-66]" />
+      <description value="Example Find Document Manifests Response Message [ITI-66]" />
       <sourceReference>
-        <reference value="Bundle/iti-65-response-full" />
+        <reference value="Bundle/iti-66-response" />
       </sourceReference>
       <exampleFor>
-        <reference value="StructureDefinition/IHE.MHD.ITI-65.Response" />
+        <reference value="StructureDefinition/IHE.MHD.ITI-66.Response" />
       </exampleFor>
     </resource>
-    -->
   </package>
   <!-- added for ig -->
   <page>
