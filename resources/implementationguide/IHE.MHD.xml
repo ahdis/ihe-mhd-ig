@@ -162,6 +162,7 @@
         <reference value="StructureDefinition/IHE.MHD.ITI-65" />
       </sourceReference>
     </resource>
+<!--    
     <resource>
       <example value="false" />
       <name value="Provide Document Bundle [ITI-65] - Response" />
@@ -170,6 +171,7 @@
         <reference value="StructureDefinition/IHE.MHD.ITI-65.Response" />
       </sourceReference>
     </resource>
+-->    
     <resource>
       <example value="true" />
       <name value="NIST XdsTools6 Provide Document Bundle - adapted" />
@@ -181,6 +183,7 @@
         <reference value="StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal" />
       </exampleFor>
     </resource>
+<!--    
     <resource>
       <example value="true" />
       <name value="Provide Document Bundle [ITI-65] Response - Minimal" />
@@ -192,7 +195,6 @@
         <reference value="StructureDefinition/IHE.MHD.ITI-65.Response" />
       </exampleFor>
     </resource>
-<!--    
     <resource>
       <example value="true" />
       <name value="Provide Document Bundle [ITI-65] Response - Full" />
