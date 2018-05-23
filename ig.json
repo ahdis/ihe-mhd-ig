@@ -16,6 +16,7 @@
     "txCache": "txCache",
     "specification": "http://hl7.org/fhir/STU3/"
   },
+  "path-pattern" : "[type]-[id].html",
   "defaults": {
     "AllergyIntolerance": {
       "template-base": "ex.html"
